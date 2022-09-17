@@ -1,0 +1,24 @@
+import React from 'react';
+import { useAuth } from '../../hooks/useAuth';
+
+export const TopPanelRecruiter = ({ showMenu }: { showMenu: Function }) => {
+    const { user } = useAuth();
+    const showOptions = () => {
+        showMenu();
+    };
+
+    return (
+        <div
+            className="top-panel-hr"
+            onClick={showOptions}
+            role="button"
+            tabIndex={0}
+            onKeyDown={showOptions}
+        >
+            <div className="top-panel-hr-paragraph">
+                <p>{user?.firstName ? `${user?.firstName} ${user?.lastName}` : 'Admin'}</p>
+            </div>
+            <span className="top-panel-hr-expand" />
+        </div>
+    );
+};
