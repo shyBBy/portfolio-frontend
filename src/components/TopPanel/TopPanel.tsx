@@ -1,94 +1,137 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { TopPanelMenu } from './TopPanelMenu';
-import { TopPanelRecruiter } from './TopPanelRecruiter';
+import { NavLink} from 'react-router-dom';
+import {
+    AppBar,
+    Avatar,
+    Box,
+    Button,
+    Container,
+    IconButton,
+    Link,
+    Menu,
+    MenuItem,
+    Toolbar,
+    Tooltip,
+    Typography
+} from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
+import CodeIcon from '@mui/icons-material/Code';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
+import {useAuth} from "../../hooks/useAuth";
+import {TopPanelUserMenu} from "./TopPanelUserMenu";
+import {TopPanelIcons} from "./TopPanelIcons";
+
+const pages = ['Główna', 'O mnie', 'Projekty', 'Kontakt'];
 
 
 export const TopPanel = () => {
-    const [show, setShow] = useState(false);
-    const showMenu = () => {
-        setShow(!show);
+    const { user} = useAuth();
+
+    const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+
+    const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+        setAnchorElNav(event.currentTarget);
+    };
+
+    const handleCloseNavMenu = () => {
+        setAnchorElNav(null);
     };
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+        <AppBar position="static" color="primary">
+            <Container maxWidth="xl">
+                <Toolbar disableGutters>
+                    <CodeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
 
-            <div className="container">
-
-                <a className="navbar-brand" href="#">shyBBy.</a>
-
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-
-                    <span className="navbar-toggler-icon"></span>
-
-                </button>
-
-                <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-
-                    <ul className="navbar-nav mr-auto smooth-scroll">
-
-                        <li className="nav-item">
-
-                            <a className="nav-link" href="#home">Home <span className="sr-only">(current)</span></a>
-
-                        </li>
-
-                        <li className="nav-item">
-
-                            <a className="nav-link" href="#about" data-offset="100">About</a>
-
-                        </li>
-
-                        <li className="nav-item">
-
-                            <a className="nav-link" href="#skills" data-offset="100">Skills</a>
-
-                        </li>
-
-                        <li className="nav-item">
-
-                            <a className="nav-link" href="#works" data-offset="100">Works</a>
-
-                        </li>
-
-                        <li className="nav-item">
-
-                            <a className="nav-link" href="#contact" data-offset="100">Contact</a>
-
-                        </li>
-
-                    </ul>
-
-                    <ul className="navbar-nav nav-flex-icons">
-
-                        <li className="nav-item">
-
-                            <a href="https://www.linkedin.com/in/dawid-olczak-6658a720a/" className="nav-link"><i
-                                className="fab fa-linkedin light-green-text-2"></i></a>
-
-                        </li>
-
-                        <li className="nav-item">
-
-                            <a href="https://github.com/shyBBy" className="nav-link" ><i
-                                className="fab fa-github-square light-green-text-2"></i></a>
-
-                        </li>
-
-                        <li className="nav-item">
-
-                            <a href="https://www.behance.net/edekkredekc94c" className="nav-link"><i
-                                className="fab fa-behance-square light-green-text-2"></i></a>
-
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </nav>
+                    <Typography
+                        variant="h6"
+                        noWrap
+                        component="a"
+                        href="/"
+                        sx={{
+                            mr: 2,
+                            display: { xs: 'none', md: 'flex' },
+                            fontFamily: 'monospace',
+                            fontWeight: 600,
+                            letterSpacing: '.1rem',
+                            color: 'inherit',
+                            textDecoration: 'none',
+                        }}
+                    >
+                        shyBBy.
+                    </Typography>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                        <IconButton
+                            size="large"
+                            aria-label="account of current user"
+                            aria-controls="menu-appbar"
+                            aria-haspopup="true"
+                            onClick={handleOpenNavMenu}
+                            color="inherit"
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        <Menu
+                            id="menu-appbar"
+                            anchorEl={anchorElNav}
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'left',
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'left',
+                            }}
+                            open={Boolean(anchorElNav)}
+                            onClose={handleCloseNavMenu}
+                            sx={{
+                                display: { xs: 'block', md: 'none' },
+                            }}
+                        >
+                            {pages.map((page) => (
+                                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center">{page}</Typography>
+                                </MenuItem>
+                            ))}
+                        </Menu>
+                    </Box>
+                    <CodeIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    <Typography
+                        variant="h5"
+                        noWrap
+                        component="a"
+                        href=""
+                        sx={{
+                            mr: 2,
+                            display: { xs: 'flex', md: 'none' },
+                            flexGrow: 1,
+                            fontFamily: 'monospace',
+                            fontWeight: 600,
+                            letterSpacing: '.3rem',
+                            color: 'inherit',
+                            textDecoration: 'none',
+                        }}
+                    >
+                        shyBBy.
+                    </Typography>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                        {pages.map((page) => (
+                            <Button
+                                key={page}
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                                {page}
+                            </Button>
+                        ))}
+                    </Box>
+                    <TopPanelIcons/>
+                    {user ? <TopPanelUserMenu/>: null}
+                </Toolbar>
+            </Container>
+        </AppBar>
     );
 };

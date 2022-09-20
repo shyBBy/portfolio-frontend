@@ -8,19 +8,22 @@ import 'primereact/resources/themes/mdc-dark-indigo/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import {AppProviders} from "./providers/AppProviders";
+import CssBaseline from '@mui/material/CssBaseline';
+import {ThemeProvider} from "@mui/material";
+import { theme } from './theme';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
     <BrowserRouter>
-        <AppProviders>
-            <App />
-        </AppProviders>
+        <ThemeProvider theme={theme}>
+            {/*<CssBaseline />*/}
+            <AppProviders>
+                <App />
+            </AppProviders>
+        </ThemeProvider>
     </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
