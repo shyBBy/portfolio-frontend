@@ -2,7 +2,7 @@ import React from "react";
 import {Box, Button, Container, Stack, Typography} from "@mui/material";
 import {TopPanelIcons} from "../../TopPanel/TopPanelIcons";
 
-export const AboutMe = () => {
+export const Header = () => {
     return (
         <>
             <Box
@@ -20,12 +20,10 @@ export const AboutMe = () => {
                         color="text.primary"
                         gutterBottom
                     >
-                        Album layout
+                        Cześć, jestem Dawid
                     </Typography>
                     <Typography variant="h5" align="center" color="text.secondary" paragraph>
-                        Something short and leading about the collection below—its contents,
-                        the creator, etc. Make it short and sweet, but not too short so folks
-                        don&apos;t simply skip over it entirely.
+                        Jakiś tam opis o mnie, coś na szybko i krótkiego.
                     </Typography>
                     <Stack
                         sx={{ pt: 4 }}
@@ -33,8 +31,6 @@ export const AboutMe = () => {
                         spacing={2}
                         justifyContent="center"
                     >
-                        <Button color="primary">Main call to action</Button>
-                        <Button>Secondary action</Button>
                     </Stack>
                 </Container>
             </Box>
