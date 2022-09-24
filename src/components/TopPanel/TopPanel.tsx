@@ -53,14 +53,13 @@ export const TopPanel = () => {
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 600,
+                            fontWeight: 300,
                             letterSpacing: '.1rem',
                             color: 'inherit',
                             textDecoration: 'none',
                         }}
                     >
-                        shyBBy.
+                        Dawid 'shyBBy' Olczak
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
@@ -108,8 +107,7 @@ export const TopPanel = () => {
                             mr: 2,
                             display: { xs: 'flex', md: 'none' },
                             flexGrow: 1,
-                            fontFamily: 'monospace',
-                            fontWeight: 600,
+                            fontWeight: 300,
                             letterSpacing: '.3rem',
                             color: 'inherit',
                             textDecoration: 'none',
