@@ -1,5 +1,7 @@
 import { createTheme} from '@mui/material/styles';
 import { red } from '@mui/material/colors';
+import bg from './utils/bg4.jpg'
+
 
 
 export const theme = createTheme({
@@ -26,6 +28,8 @@ export const theme = createTheme({
         background: {
             default: '#232323',
             paper: '#252525',
+            // @ts-ignore
+            image: `url(${bg})`,
         },
         divider: 'rgba(80,80,80,0.12)',
         error: {
