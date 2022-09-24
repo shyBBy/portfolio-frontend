@@ -18,10 +18,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CodeIcon from '@mui/icons-material/Code';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
 import {useAuth} from "../../hooks/useAuth";
 import {TopPanelUserMenu} from "./TopPanelUserMenu";
 import {TopPanelIcons} from "./TopPanelIcons";
+import {theme} from "../../theme";
 
 const pages = ['Główna', 'O mnie', 'Projekty', 'Kontakt'];
 
@@ -120,7 +120,7 @@ export const TopPanel = () => {
                             <Button
                                 key={page}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                sx={{ my: 2, color: theme.palette.primary.contrastText, display: 'block' }}
                             >
                                 {page}
                             </Button>
