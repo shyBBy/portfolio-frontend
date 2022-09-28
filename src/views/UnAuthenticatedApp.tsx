@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { LoginPage } from '../components/LoginPage/LoginPage';
-import { MainPage } from '../components/MainPage/MainPage';
+import { MainPage } from './MainPage';
 
 export const UnAuthenticatedApp = () => {
     return (
