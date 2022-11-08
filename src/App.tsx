@@ -1,18 +1,20 @@
 import React from 'react';
 import {useAuth} from "./hooks/useAuth";
-import { AuthenticatedApp } from './views/AuthenticatedApp';
-import { UnAuthenticatedApp } from './views/UnAuthenticatedApp';
-import {TopPanel} from "./components/TopPanel/TopPanel";
+import { AuthenticatedApp } from './pages/AuthenticatedApp';
+import { UnAuthenticatedApp } from './pages/UnAuthenticatedApp';
+import {Rightbar} from "./components/Rightbar/Rightbar";
+import {Box, Container, Grid} from "@mui/material";
+import {Sidebar} from "./components/Sidebar/Sidebar";
+import {HomePage} from "./pages/HomePage";
 
 export const App = () => {
-  const { user, notification } = useAuth();
+  const { user } = useAuth();
   // {user ? <AuthenticatedApp /> : <UnAuthenticatedApp />}
   return (
     <>
-      {notification}
-      <TopPanel />
+      <Sidebar />
+      <Rightbar />
       {user ? <AuthenticatedApp /> : <UnAuthenticatedApp />}
-
     </>
   )
 }
