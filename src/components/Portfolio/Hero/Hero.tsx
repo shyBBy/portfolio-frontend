@@ -26,11 +26,7 @@ export const Hero = () => {
             </Tabs>
 
             <Box sx={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                {
-                    Projects.data.map((project:any) => (
-                        <Project key={project.id} title={project.title} description={project.description} image={project.image} tag={project.tags} source={project.source} liveVersion={project.liveVersion}/>
-                    ))
-                }
+                
             </Box>
         </>
     )

@@ -12,6 +12,7 @@ export const App = () => {
   // {user ? <AuthenticatedApp /> : <UnAuthenticatedApp />}
   return (
     <>
+
       <Sidebar />
       <Rightbar />
       {user ? <AuthenticatedApp /> : <UnAuthenticatedApp />}
