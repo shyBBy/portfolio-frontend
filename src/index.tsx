@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { ThemeProvider } from '@mui/material/styles';
 import {App} from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
-import 'primereact/resources/themes/mdc-dark-indigo/theme.css';
-import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
-import {AppProviders} from "./providers/AppProviders";
-import CssBaseline from '@mui/material/CssBaseline';
-import {ThemeProvider} from "@mui/material";
-import { theme } from './theme';
+import { AppProviders } from "./providers/AppProviders";
+import theme from './theme';
+import {CssBaseline} from "@mui/material";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -18,11 +14,12 @@ const root = ReactDOM.createRoot(
 root.render(
     <BrowserRouter>
         <ThemeProvider theme={theme}>
-            {/*<CssBaseline />*/}
+            <CssBaseline/>
             <AppProviders>
                 <App />
             </AppProviders>
         </ThemeProvider>
+        
     </BrowserRouter>
 );
 

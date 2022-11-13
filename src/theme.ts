@@ -1,45 +1,45 @@
-import { createTheme} from '@mui/material/styles';
-import { red } from '@mui/material/colors';
-import bg from './utils/bg4.jpg'
+import { createTheme } from "@mui/material/styles";
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import '@fontsource/asap';
+import "@fontsource/bebas-neue";
 
 
-
-export const theme = createTheme({
+const theme = createTheme({
     palette: {
         primary: {
-            main: '#ffffff',
-            light: '#b1b1b1',
-            dark: '#b9b9b9',
-            contrastText: 'rgba(35,35,35,0.87)',
+            main: '#ffc107',
         },
         secondary: {
-            main: '#e65358',
-        },
-        info: {
-            main: '#f9f900',
-        },
-        text: {
-            primary: 'rgba(191,191,191,0.87)',
-            // @ts-ignore
-            hint: 'rgba(226,226,226,0.38)',
-            secondary: 'rgba(185,185,185,0.54)',
-            disabled: 'rgba(94,94,94,0.38)',
+            main: '#9c9c9c',
         },
         background: {
-            default: '#232323',
-            paper: '#252525',
-            // @ts-ignore
-            image: `url(${bg})`,
+            default: '#191923',
+            paper: '#20202a',
         },
-        divider: 'rgba(80,80,80,0.12)',
-        error: {
-            main: '#bf3b32',
-            light: '#e8352a',
-            dark: '#7f1008',
+        text: {
+            primary: '#ffffff',
+            secondary: '#ffc107',
+            disabled: 'rgba(86,86,86,0.55)',
         },
+        divider: '#191923',
     },
     typography: {
-        fontFamily: '"Roboto Condensed", "Helvetica", "Arial", sans-serif',
+        fontFamily: 'Asap',
+        h1: {
+            fontFamily: 'Bebas Neue',
+        },
+        fontSize: 13,
+        subtitle1: {
+            fontSize: 14,
+            fontWeight: 300,
+        },
+        subtitle2: {
+            fontSize: 12,
+        },
     },
 });
 
+export default theme;

@@ -1,0 +1,9 @@
+.scrollBar {
+    height: 30vh;
+    max-height: 35vh;
+    overflow-y: scroll;
+}
+
+    .scrollBar::-webkit-scrollbar{
+        display: none;
+    }
