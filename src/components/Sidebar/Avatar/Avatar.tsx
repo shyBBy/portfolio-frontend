@@ -1,6 +1,7 @@
 import React from 'react'
 import './Avatar.css'
 import me3 from '../../../assets/img/me3.png'
+import me4 from '../../../assets/img/me4.png'
 import {Box, Container } from '@mui/material'
 
 export const Avatar = () => {
