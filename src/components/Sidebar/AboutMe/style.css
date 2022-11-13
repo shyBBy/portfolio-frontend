@@ -1,6 +1,6 @@
 .scrollBar {
-    height: 50vh;
-    max-height: 90vh;
+    height: 30vh;
+    max-height: 35vh;
     overflow-y: scroll;
 }
 

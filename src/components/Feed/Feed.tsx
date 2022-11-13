@@ -8,7 +8,7 @@ export const Feed = () => {
     return (
         <>
             <Hero/>
-            <AboutMe/>
+
         </>
     )
 }

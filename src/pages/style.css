@@ -1,0 +1,10 @@
+.bgimage{
+    background-image:url('../assets/img/bg4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mask {
+    background:rgba(36,36,46,0.6);
+
+}

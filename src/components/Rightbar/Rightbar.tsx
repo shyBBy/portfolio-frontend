@@ -10,20 +10,25 @@ import {
     ListItemButton, ListItemIcon, ListItemText,
     Paper,
     Stack,
+    Tab,
+    Tabs,
     Toolbar,
-    Tooltip
+    Tooltip, useTheme
 } from '@mui/material'
 import './style.css'
 import {Link, useLocation, useNavigate} from "react-router-dom";
 import {navigationItems} from "../../config/navigation";
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import MenuIcon from '@mui/icons-material/Menu';
-import IconButton from '@mui/material/IconButton';
-
+import PhoneIcon from '@mui/icons-material/Phone';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import PersonPinIcon from '@mui/icons-material/PersonPin';
 const drawerWidth = 240;
 
 export const Rightbar = () => {
+
+    const theme = useTheme();
+
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
     const handleDrawerToggle = () => {
@@ -67,9 +72,7 @@ export const Rightbar = () => {
 
 
     return (
-            <Box style={{ width: `130px`, height: '90vh' }} position="fixed" right={'8%'}>
-                <Card sx={{height: '100vh', paddingTop: '35vh'}}>
-                    <Stack spacing={2} p={3}>
+                    <Stack spacing={2} p={3} sx={{paddingTop: '35vh'}}>
                         {
                             navigationItems.rightbar.map((item) => (
                                 <Link
@@ -87,7 +90,5 @@ export const Rightbar = () => {
                             ))
                         }
                     </Stack>
-                </Card>
-            </Box>
     )
 }
