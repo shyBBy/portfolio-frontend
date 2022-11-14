@@ -14,8 +14,8 @@ export const HomePage = () => {
 
     return (
         <>
-            <Box className='bgimage' sx={{width: '100%', height: '40vh'}}>
-                <Box className='mask' sx={{width: '100%', height: '40vh'}}>
+            <Box className='bgimage' sx={{width: '100%', height: '50vh'}} position={'relative'}>
+                <Box className='mask' sx={{width: '100%', height: '50vh'}}>
                     <Container>
                         <Feed/>
                     </Container>
