@@ -1,10 +1,9 @@
 .avatar {
     display: inline-block;
     position: relative;
+    left: 7%;
     width: 200px;
     height: 200px;
-    overflow: hidden;
-    border-radius: 50%;
 }
 
     .avatar img {
