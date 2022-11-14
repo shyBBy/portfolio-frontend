@@ -4,6 +4,7 @@ import { StackInfo } from './StackInfo'
 import { TechStackList } from './TechStack/TechStackList'
 import './style.css'
 import {AboutMeBasicInfo} from "./AboutMeBasicInfo";
+import {Courses} from "./Courses/Courses";
 
 export const AboutMe = () => {
 
@@ -23,7 +24,7 @@ export const AboutMe = () => {
                     <AboutMeBasicInfo/>
                 </Box>
                 <Divider/>
-                <TechStackList />
+                <Courses/>
             </div>
         </>
         )
