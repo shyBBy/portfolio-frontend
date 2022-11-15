@@ -1,27 +1,76 @@
-import {Box, Tab, Tabs } from '@mui/material';
 import React from 'react'
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import {ProgrammingList} from "../ProgrammingList/ProgrammingList";
+import {Graphic2DList} from "../Graphic2DList/Graphic2DList";
+import { Graphic3DList } from '../Graphic3DList/Graphic3DList';
+import { Container } from '@mui/material';
+
+interface TabPanelProps {
+    children?: React.ReactNode;
+    index: number;
+    value: number;
+}
+
+function TabPanel(props: TabPanelProps) {
+    const { children, value, index, ...other } = props;
+
+    return (
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`simple-tabpanel-${index}`}
+            aria-labelledby={`simple-tab-${index}`}
+            {...other}
+        >
+            {value === index && (
+                <Box sx={{ p: 3 }}>
+                    <Typography>{children}</Typography>
+                </Box>
+            )}
+        </div>
+    );
+}
+
+function a11yProps(index: number) {
+    return {
+        id: `simple-tab-${index}`,
+        'aria-controls': `simple-tabpanel-${index}`,
+    };
+}
 
 export const Hero = () => {
-    const [value, setValue] = React.useState('one');
 
-    const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+    const [value, setValue] = React.useState(0);
+
+    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
+
     return(
         <>
-            <Tabs
-                value={value}
-                onChange={handleChange}
-
-            >
-                <Tab value="one" label="Item One" />
-                <Tab value="two" label="Item Two" />
-                <Tab value="three" label="Item Three" />
-            </Tabs>
-
-            <Box sx={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap'}}>
-                
-            </Box>
+            <Container>
+                <Box sx={{ width: '100%' }}>
+                    <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                            <Tab label="programowanie" {...a11yProps(0)} />
+                            <Tab label="grafika 2d" {...a11yProps(1)} />
+                            <Tab label="grafika 3d" {...a11yProps(2)} />
+                        </Tabs>
+                    </Box>
+                    <TabPanel value={value} index={0}>
+                        <ProgrammingList/>
+                    </TabPanel>
+                    <TabPanel value={value} index={1}>
+                        <Graphic2DList/>
+                    </TabPanel>
+                    <TabPanel value={value} index={2}>
+                        <Graphic3DList/>
+                    </TabPanel>
+                </Box>
+            </Container>
         </>
     )
 }
