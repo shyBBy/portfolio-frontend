@@ -1,7 +1,8 @@
 import React from 'react'
-import {Box, Grid, Paper, Typography, useTheme} from "@mui/material";
+import {Box, Button, Grid, Paper, Typography, useTheme} from "@mui/material";
 import art from '../../../assets/img/undraw_hello_re_3evm.svg'
 import './Hero.css'
+import {Link} from "react-router-dom";
 
 export const Hero = () => {
 
@@ -19,6 +20,7 @@ export const Hero = () => {
                 <Typography variant={'h1'}>Cześć, jestem Dawid!</Typography>
                 <Box width={'41%'}>
                     <Typography variant={'body1'}>Uczący się Full-Stack Developer, jeśli chcesz dowiedzieć się czegoś więcej o mojej historii w programowaniu oraz życiu nie związanym z branża to kliknij w poniższy przycisk lub skorzystaj z bocznego menu :)</Typography>
+                    <Link to={'/portfolio'} style={{textDecoration: 'none'}}><Button variant="outlined">Więcej o mnie...</Button></Link>
                 </Box>
                 <Box
                     width={'41%'}
