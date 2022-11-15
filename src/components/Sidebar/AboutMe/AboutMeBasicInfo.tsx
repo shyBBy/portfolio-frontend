@@ -1,7 +1,7 @@
 import {
     Box,
     Container, Divider,
-    Grid,
+    Grid, List, ListItem,
     Stack,
     Table,
     TableBody,
@@ -14,6 +14,8 @@ import {
 } from '@mui/material'
 import React from 'react'
 import DoneIcon from '@mui/icons-material/Done';
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
 
 
 
@@ -41,15 +43,16 @@ export const AboutMeBasicInfo = () => {
             <Box p='10px'>
                 <Typography variant={'h6'}>Języki programowania</Typography>
                 <Box marginTop={'10px'}>
-                    <Typography variant={'body1'} color={theme.palette.secondary.main}>
-                        <DoneIcon fontSize="small" color={'primary'}/> Javascript
-                    </Typography>
-                    <Typography variant={'body1'} color={theme.palette.secondary.main}>
-                        <DoneIcon fontSize="small" color={'primary'}/> GIT
-                    </Typography>
-                    <Typography variant={'body1'} color={theme.palette.secondary.main}>
-                        <DoneIcon fontSize="small" color={'primary'}/>
-                    </Typography>
+                    <List>
+                        <ListItem>
+                            <ListItemIcon>
+                                <DoneIcon fontSize="small" color={'primary'}/>
+                            </ListItemIcon>
+                            <ListItemText
+                                primary="Loga"
+                            />
+                        </ListItem>
+                    </List>
                 </Box>
             </Box>
         </>

@@ -1,8 +1,6 @@
 import React from 'react'
-import {Box, Grid, Typography, useTheme} from "@mui/material";
-import me2 from '../../../assets/img/me2.png'
-import art from '../../../assets/img/undraw_coding_re_iv62.svg'
-import art2 from '../../../assets/img/undraw_dev_productivity_re_fylf.svg'
+import {Box, Grid, Paper, Typography, useTheme} from "@mui/material";
+import art from '../../../assets/img/undraw_hello_re_3evm.svg'
 import './Hero.css'
 
 export const Hero = () => {
@@ -11,18 +9,6 @@ export const Hero = () => {
 
     return(
         <>
-            {/*<Box position={"absolute"} top={'1%'} left={'14%'}>*/}
-            {/*    <img  className='artImage' src={art2}/>*/}
-            {/*</Box>*/}
-            {/*<Box position={"absolute"} top={'31%'} left={'29%'}>*/}
-            {/*   <Typography variant={"h4"} color={'primary'}>Cześć</Typography>*/}
-            {/*</Box>*/}
-            {/*<Box position={"absolute"} top={'19%'} left={'34%'}>*/}
-            {/*    <Typography variant={"h4"}>Jestem Dawid</Typography>*/}
-            {/*</Box>*/}
-            {/*<Box position={"absolute"} top={'52%'} left={'36%'}>*/}
-            {/*    <Typography variant={"body2"}>Jakiś tam krótki opisik</Typography>*/}
-            {/*</Box>*/}
             <Box position={"absolute"}
                  sx=
                      {{
@@ -45,6 +31,7 @@ export const Hero = () => {
                 >
                     <img className={'artImage'} src={art}/>
                 </Box>
+
             </Box>
         </>
     )
