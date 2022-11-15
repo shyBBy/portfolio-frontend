@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Grid, Typography, useTheme, Stack, List, ListItem} from "@mui/material";
+import {Box, Grid, Typography, useTheme, Stack, List, ListItem, Divider} from "@mui/material";
 
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
@@ -14,13 +14,15 @@ export const WhatIDoSection = ()=> {
     const theme = useTheme();
     return(
         <>
-            <Typography
-                variant={'h1'}
-                color={theme.palette.primary.main}
-                fontSize={'55px'}
-            >
-                Czym się zajmuje
-            </Typography>
+            <Divider textAlign="left">
+                <Typography
+                    variant={'h1'}
+                    color={theme.palette.primary.main}
+                    fontSize={'55px'}
+                >
+                    Czym się zajmuje
+                </Typography>
+            </Divider>
             <Stack
                 direction="row"
                 justifyContent="space-between"
@@ -63,7 +65,7 @@ export const WhatIDoSection = ()=> {
                         variant={'body1'}
                         color={theme.palette.secondary.main}
                     >
-                        Przede wszystkim rozwojem samego siebie i zagłębianiu się w tematyce programowania.
+                        Przede wszystkim rozwojem samego siebie i zagłębianiu się w tematyce programowania. Trzeba tu wymyśleć jakiś tekst albo zastanowić się co tu można dodać.
                     </Typography>
                 </Box>
             </Stack>
