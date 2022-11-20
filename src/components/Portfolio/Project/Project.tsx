@@ -8,318 +8,62 @@ import {
     CardContent,
     CardMedia,
     Chip,
-    Stack,
-    Typography
+    Typography,
+    useTheme
 } from "@mui/material";
-import img from '../../../assets/img/app3.png'
+import img from '../../../assets/img/bg4.jpg'
+import {SingleProjectInterface} from "../../../Interfaces/ProjectInterface";
 
 export const Project = (props: any) => {
+    const theme = useTheme();
+
+    const {project, tags} = props;
+
     return(
         <>
-            <Stack direction={"row"}>
-                <Card sx={{maxWidth: 375, margin: '1rem'}}>
-                    <CardActionArea>
-                        <CardMedia component='img' image={img}/>
-                        <CardContent>
-                            <Typography variant='h5' component="div">
-                                Tytuł projektu
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Krótki opis danego projektu, o co w nim chodziło po co itp.
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
+            <Card sx={{maxWidth: 375, margin: '1rem'}}>
+                <CardActionArea>
+                    <CardMedia component='img' image={img}/>
+                    <CardContent>
+                        <Typography variant='h5' component="div">
+                            {project.title}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            {project.description}
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
 
-                    <CardActions sx={{display: 'flex', flexDirection: 'column'}}>
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'space-around', mx: 'auto', mb: 3}}>
+                <CardActions sx={{display: 'flex', flexDirection: 'column'}}>
+                    <Box sx={{width: '100%', display: 'flex', justifyContent: 'space-around', mx: 'auto', mb: 3}}>
+                        <a href={project.source} style={{textDecoration: 'none'}}>
                             <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Repozytorium
+                                <Typography variant={'subtitle2'}  display={'inline-block'}>
+                                    ŹRÓDŁO
+                                </Typography>
                             </Button>
+                        </a>
 
+                        <a href={project.liveVersion} style={{textDecoration: 'none'}}>
                             <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Wersja demo
+                                <Typography variant={'subtitle2'}  display={'inline-block'}>
+                                    DEMO
+                                </Typography>
                             </Button>
-                        </Box>
+                        </a>
+                    </Box>
 
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: "1rem", mb: 2}}>
-                            <Chip label='javascript' key='javascript'/>
-                            <Chip label='nodejs' key='javascript'/>
-                            <Chip label='mysql' key='javascript'/>
-                            <Chip label='handlebars' key='javascript'/>
-                        </Box>
+                    <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: "1rem", mb: 2}}>
 
-                    </CardActions>
-                </Card>
-                <Card sx={{maxWidth: 375, margin: '1rem'}}>
-                    <CardActionArea>
-                        <CardMedia component='img' image={img}/>
-                        <CardContent>
-                            <Typography variant='h5' component="div">
-                                Tytuł projektu
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Krótki opis danego projektu, o co w nim chodziło po co itp.
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
+                        {
+                            tags.map((tag: string) => (
+                                <Chip label={tag} key={tag}/>
+                            ))
+                        }
+                    </Box>
 
-                    <CardActions sx={{display: 'flex', flexDirection: 'column'}}>
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'space-around', mx: 'auto', mb: 3}}>
-                            <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Repozytorium
-                            </Button>
-
-                            <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Wersja demo
-                            </Button>
-                        </Box>
-
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: "1rem", mb: 2}}>
-                            <Chip label='javascript' key='javascript'/>
-                            <Chip label='nodejs' key='javascript'/>
-                            <Chip label='mysql' key='javascript'/>
-                            <Chip label='handlebars' key='javascript'/>
-                        </Box>
-
-                    </CardActions>
-                </Card>
-                <Card sx={{maxWidth: 375, margin: '1rem'}}>
-                    <CardActionArea>
-                        <CardMedia component='img' image={img}/>
-                        <CardContent>
-                            <Typography variant='h5' component="div">
-                                Tytuł projektu
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Krótki opis danego projektu, o co w nim chodziło po co itp.
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-
-                    <CardActions sx={{display: 'flex', flexDirection: 'column'}}>
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'space-around', mx: 'auto', mb: 3}}>
-                            <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Repozytorium
-                            </Button>
-
-                            <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Wersja demo
-                            </Button>
-                        </Box>
-
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: "1rem", mb: 2}}>
-                            <Chip label='javascript' key='javascript'/>
-                            <Chip label='nodejs' key='javascript'/>
-                            <Chip label='mysql' key='javascript'/>
-                            <Chip label='handlebars' key='javascript'/>
-                        </Box>
-
-                    </CardActions>
-                </Card>
-            </Stack>
-
-            <Stack direction={"row"}>
-                <Card sx={{maxWidth: 375, margin: '1rem'}}>
-                    <CardActionArea>
-                        <CardMedia component='img' image={img}/>
-                        <CardContent>
-                            <Typography variant='h5' component="div">
-                                Tytuł projektu
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Krótki opis danego projektu, o co w nim chodziło po co itp.
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-
-                    <CardActions sx={{display: 'flex', flexDirection: 'column'}}>
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'space-around', mx: 'auto', mb: 3}}>
-                            <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Repozytorium
-                            </Button>
-
-                            <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Wersja demo
-                            </Button>
-                        </Box>
-
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: "1rem", mb: 2}}>
-                            <Chip label='javascript' key='javascript'/>
-                            <Chip label='nodejs' key='javascript'/>
-                            <Chip label='mysql' key='javascript'/>
-                            <Chip label='handlebars' key='javascript'/>
-                        </Box>
-
-                    </CardActions>
-                </Card>
-                <Card sx={{maxWidth: 375, margin: '1rem'}}>
-                    <CardActionArea>
-                        <CardMedia component='img' image={img}/>
-                        <CardContent>
-                            <Typography variant='h5' component="div">
-                                Tytuł projektu
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Krótki opis danego projektu, o co w nim chodziło po co itp.
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-
-                    <CardActions sx={{display: 'flex', flexDirection: 'column'}}>
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'space-around', mx: 'auto', mb: 3}}>
-                            <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Repozytorium
-                            </Button>
-
-                            <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Wersja demo
-                            </Button>
-                        </Box>
-
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: "1rem", mb: 2}}>
-                            <Chip label='javascript' key='javascript'/>
-                            <Chip label='nodejs' key='javascript'/>
-                            <Chip label='mysql' key='javascript'/>
-                            <Chip label='handlebars' key='javascript'/>
-                        </Box>
-
-                    </CardActions>
-                </Card>
-                <Card sx={{maxWidth: 375, margin: '1rem'}}>
-                    <CardActionArea>
-                        <CardMedia component='img' image={img}/>
-                        <CardContent>
-                            <Typography variant='h5' component="div">
-                                Tytuł projektu
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Krótki opis danego projektu, o co w nim chodziło po co itp.
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-
-                    <CardActions sx={{display: 'flex', flexDirection: 'column'}}>
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'space-around', mx: 'auto', mb: 3}}>
-                            <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Repozytorium
-                            </Button>
-
-                            <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Wersja demo
-                            </Button>
-                        </Box>
-
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: "1rem", mb: 2}}>
-                            <Chip label='javascript' key='javascript'/>
-                            <Chip label='nodejs' key='javascript'/>
-                            <Chip label='mysql' key='javascript'/>
-                            <Chip label='handlebars' key='javascript'/>
-                        </Box>
-
-                    </CardActions>
-                </Card>
-            </Stack>
-            <Stack direction={"row"}>
-                <Card sx={{maxWidth: 375, margin: '1rem'}}>
-                    <CardActionArea>
-                        <CardMedia component='img' image={img}/>
-                        <CardContent>
-                            <Typography variant='h5' component="div">
-                                Tytuł projektu
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Krótki opis danego projektu, o co w nim chodziło po co itp.
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-
-                    <CardActions sx={{display: 'flex', flexDirection: 'column'}}>
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'space-around', mx: 'auto', mb: 3}}>
-                            <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Repozytorium
-                            </Button>
-
-                            <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Wersja demo
-                            </Button>
-                        </Box>
-
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: "1rem", mb: 2}}>
-                            <Chip label='javascript' key='javascript'/>
-                            <Chip label='nodejs' key='javascript'/>
-                            <Chip label='mysql' key='javascript'/>
-                            <Chip label='handlebars' key='javascript'/>
-                        </Box>
-
-                    </CardActions>
-                </Card>
-                <Card sx={{maxWidth: 375, margin: '1rem'}}>
-                    <CardActionArea>
-                        <CardMedia component='img' image={img}/>
-                        <CardContent>
-                            <Typography variant='h5' component="div">
-                                Tytuł projektu
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Krótki opis danego projektu, o co w nim chodziło po co itp.
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-
-                    <CardActions sx={{display: 'flex', flexDirection: 'column'}}>
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'space-around', mx: 'auto', mb: 3}}>
-                            <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Repozytorium
-                            </Button>
-
-                            <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Wersja demo
-                            </Button>
-                        </Box>
-
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: "1rem", mb: 2}}>
-                            <Chip label='javascript' key='javascript'/>
-                            <Chip label='nodejs' key='javascript'/>
-                            <Chip label='mysql' key='javascript'/>
-                            <Chip label='handlebars' key='javascript'/>
-                        </Box>
-
-                    </CardActions>
-                </Card>
-                <Card sx={{maxWidth: 375, margin: '1rem'}}>
-                    <CardActionArea>
-                        <CardMedia component='img' image={img}/>
-                        <CardContent>
-                            <Typography variant='h5' component="div">
-                                Tytuł projektu
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                Krótki opis danego projektu, o co w nim chodziło po co itp.
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-
-                    <CardActions sx={{display: 'flex', flexDirection: 'column'}}>
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'space-around', mx: 'auto', mb: 3}}>
-                            <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Repozytorium
-                            </Button>
-
-                            <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
-                                Wersja demo
-                            </Button>
-                        </Box>
-
-                        <Box sx={{width: '100%', display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: "1rem", mb: 2}}>
-                            <Chip label='javascript' key='javascript'/>
-                            <Chip label='nodejs' key='javascript'/>
-                            <Chip label='mysql' key='javascript'/>
-                            <Chip label='handlebars' key='javascript'/>
-                        </Box>
-
-                    </CardActions>
-                </Card>
-            </Stack>
+                </CardActions>
+            </Card>
         </>
     )
 }
