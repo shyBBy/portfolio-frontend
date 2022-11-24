@@ -6,7 +6,7 @@ import { Grid } from '@mui/material';
 export const Hero = () => {
     return(
         <>
-            <Box  sx={{width: '100%', height: '30vh'}} justifyContent={'center'}>
+            <Box  sx={{width: '100%', height: '30vh'}}>
 
                 <Grid
                     container
