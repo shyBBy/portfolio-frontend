@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import {ProgrammingList} from "../ProgrammingList/ProgrammingList";
 import {Graphic2DList} from "../Graphic2DList/Graphic2DList";
 import { Graphic3DList } from '../Graphic3DList/Graphic3DList';
-import { Container } from '@mui/material';
+import { Container, Stack } from '@mui/material';
 
 interface TabPanelProps {
     children?: React.ReactNode;
