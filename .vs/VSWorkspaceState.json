@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\Feed",
+    "\\src\\components\\Rightbar",
+    "\\src\\components\\Sidebar",
+    "\\src\\hooks",
+    "\\src\\layouts",
+    "\\src\\pages"
+  ],
+  "SelectedNode": "\\src\\components\\Sidebar\\Sidebar.tsx",
+  "PreviewInSolutionExplorer": false
+}

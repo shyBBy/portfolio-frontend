@@ -1,0 +1,15 @@
+div.li {
+    list-style-type: none;
+}
+
+
+
+.scrollBar {
+    height: 60vh;
+    max-height: 55vh;
+    overflow-y: scroll;
+}
+
+    .scrollBar::-webkit-scrollbar{
+        display: none;
+    }

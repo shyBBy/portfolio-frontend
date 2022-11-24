@@ -1,8 +1,6 @@
 import React, { useContext, useEffect, useState, createContext } from 'react';
-import { useNotification } from '../components/Notification';
 import {config} from "../config/config";
 import { setIfErrMsg } from '../helpers/setIfErrMsg';
-import {setNotification} from "../helpers/setNotification";
 import { usePathRedirect } from '../helpers/usePathRedirect';
 
 export enum Role {
@@ -35,13 +33,11 @@ interface AuthContextType {
     setUser: React.Dispatch<React.SetStateAction<LoggedUserRes | null>>;
     signIn: (data: Login) => Promise<void>;
     signOut: () => void;
-    toast: React.MutableRefObject<any>;
-    notification: JSX.Element;
 }
 const AuthContext = createContext<AuthContextType>(null!);
 
 export const AuthProvider = ({children}: {children: JSX.Element}) => {
-    const { Notification, toast } = useNotification();
+
     const [user, setUser] = useState<LoggedUserRes | null>(null);
     const signOut = async () => {
         try {
@@ -52,11 +48,11 @@ export const AuthProvider = ({children}: {children: JSX.Element}) => {
                 );
             if (!res.ok) {
                 const errMsg = await setIfErrMsg(res);
-                setNotification(toast, errMsg);
+                
                 setUser(null);
             }
         } catch (e) {
-            setNotification(toast);
+            
             setUser(null)
         } finally {
             setUser(null)
@@ -82,7 +78,7 @@ export const AuthProvider = ({children}: {children: JSX.Element}) => {
                     setUser(null);
                 }
             } catch (e) {
-                setNotification(toast);
+                
             }
         })();
     }, []);
@@ -99,14 +95,14 @@ export const AuthProvider = ({children}: {children: JSX.Element}) => {
                 body: JSON.stringify(data),
             },);
             if (!res.ok) {
-                setNotification(toast, 'Wrong credentials.');
+                
                 setUser(null);
             }
             const userData = (await res.json()) as LoggedUserRes;
             setUser(userData);
             pathRedirect(userData);
         } catch (e) {
-            setNotification(toast);
+            
             setUser(null);
         }
     };
@@ -114,7 +110,7 @@ export const AuthProvider = ({children}: {children: JSX.Element}) => {
     return (
         <AuthContext.Provider
             // eslint-disable-next-line react/jsx-no-constructed-context-values
-            value={{ user, setUser, signIn, signOut, notification: Notification, toast }}
+            value={{ user, setUser, signIn, signOut }}
         >
             {children}
         </AuthContext.Provider>
