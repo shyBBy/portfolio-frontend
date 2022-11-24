@@ -1,7 +1,7 @@
 import { Box } from '@mui/system'
 import React from 'react'
 import {Button, Divider, Grid, Stack, Typography, useTheme} from "@mui/material";
-import {WhatIDoSection} from "../Feed/MainContent/WhatIDoSection/WhatIDoSection";
+import {LatestAndWIPProjectSection} from "../Feed/MainContent/LatestAndWIPProjectSection/LatestAndWIPProjectSection";
 import img from "../../assets/img/undraw_coding_re_iv62.svg";
 import graphicImg from "../../assets/img/undraw_image_viewer_re_7ejc.svg";
 import codingImg from "../../assets/img/undraw_code_review_re_woeb.svg";
