@@ -16,6 +16,7 @@ import React from 'react'
 import DoneIcon from '@mui/icons-material/Done';
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
+import {SingleListItem} from "./SingleListItem";
 
 
 
@@ -40,20 +41,23 @@ export const AboutMeBasicInfo = () => {
                 </Grid>
             </Box>
             <Divider />
-            <Box p='10px'>
-                <Typography variant={'h6'}>Języki programowania</Typography>
-                <Box marginTop={'10px'}>
-                    <List>
-                        <ListItem>
-                            <ListItemIcon>
-                                <DoneIcon fontSize="small" color={'primary'}/>
-                            </ListItemIcon>
-                            <ListItemText
-                                primary="Loga"
-                            />
-                        </ListItem>
-                    </List>
-                </Box>
+            <Box p={'10px'}>
+                <Typography variant={'h6'}>Czym się zajmuję</Typography>
+            </Box>
+            <Box p={'10px'} style={{listStyleType: 'none'}}>
+                <SingleListItem text={'Tworzenie aplikacji webowych'}/>
+                <SingleListItem text={'Projektowanie stron graficznych'}/>
+                <SingleListItem text={'Projekty graficzne 2D'}/>
+                <SingleListItem text={'Loga, banery, ulotki'}/>
+            </Box>
+            <Box p={'10px'}>
+                <Typography variant={'h6'}>Dodatkowe umiejętności</Typography>
+            </Box>
+            <Box p={'10px'} style={{listStyleType: 'none'}}>
+                <SingleListItem text={'Obsługa linuxa'}/>
+                <SingleListItem text={'Hosting www, domeny, vps'}/>
+                <SingleListItem text={'Konfiguracja serwera www (apache)'}/>
+                <SingleListItem text={'Domeny internetowe'}/>
             </Box>
         </>
     )

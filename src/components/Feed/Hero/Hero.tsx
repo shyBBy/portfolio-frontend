@@ -34,6 +34,7 @@ export const Hero = () => {
                     <img className={'artImage'} src={art}/>
                 </Box>
 
+
             </Box>
         </>
     )

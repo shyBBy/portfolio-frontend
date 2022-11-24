@@ -1,5 +1,5 @@
 import React from 'react'
-import {AppBar, Toolbar, Typography} from "@mui/material";
+import {AppBar, Box, Grid, Stack, Toolbar, Typography} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from "@mui/material/IconButton";
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
@@ -19,27 +19,31 @@ export const AppBarMobileView = (props: any) => {
                 }}
             >
                 <Toolbar>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        edge="start"
-                        onClick={handleDrawerToggleSideBar}
-                        sx={{ mr: 2, display: { sm: 'none' } }}
-                    >
-                        <FormatListBulletedIcon />
-                    </IconButton>
-                    <Typography variant="h6" noWrap component="div">
+                    <Grid container>
+                        <Grid xs={4}>
+                            <IconButton
+                                color="inherit"
+                                aria-label="open drawer"
+                                edge="start"
+                                onClick={handleDrawerToggleSideBar}
+                                sx={{ mr: 2, display: { sm: 'none' } }}
+                            >
+                                <FormatListBulletedIcon />
+                            </IconButton>
+                        </Grid>
+                        <Grid xs={8} textAlign={'right'}>
+                            <IconButton
+                                color="inherit"
+                                aria-label="open drawer"
+                                edge="start"
+                                onClick={handleDrawerToggleRightBar}
+                                sx={{ mr: 2, display: { sm: 'none' } }}
+                            >
+                                <MenuIcon />
+                            </IconButton>
+                        </Grid>
 
-                    </Typography>
-                    <IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        edge="start"
-                        onClick={handleDrawerToggleRightBar}
-                        sx={{ mr: 2, display: { sm: 'none' } }}
-                    >
-                        <MenuIcon />
-                    </IconButton>
+                    </Grid>
 
                 </Toolbar>
             </AppBar>

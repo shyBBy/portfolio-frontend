@@ -8,6 +8,13 @@ export const navigationItems = {
 
         },
         {
+            name: `O mnie `,
+            to: '/about-me',
+            text: 'O mnie',
+            icon: `fa-solid fa-user fa-2xl`
+
+        },
+        {
             name: 'Portfolio',
             to: '/portfolio',
             text:'portfolio',
