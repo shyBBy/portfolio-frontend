@@ -42,7 +42,7 @@ export const UnAuthenticatedApp = () => {
                     drawerSideBarWidth={drawerSideBarWidth}
                     mobileOpenSideBar={mobileOpenSideBar}
                     handleDrawerToggleSideBar={handleDrawerToggleSideBar}
-                    drawerRightBarWidth={!user? 0 : drawerRightBarWidth}
+                    drawerRightBarWidth={drawerRightBarWidth}
                     mobileOpenRightBar={mobileOpenRightBar}
                     handleDrawerToggleRightBar={handleDrawerToggleRightBar}
                 />

@@ -39,25 +39,25 @@ export const navigationItems = {
             name: 'Glowna',
             to: '/admin/main',
             text: 'glowna',
-            icon: `fa-solid fa-house fa-2xl`
+            icon: `fa-solid fa-house `
         },
         {
             name: 'Projekty',
             to: '/admin/projects',
             text: 'projekty',
-            icon: `fa-solid fa-house fa-2xl`
+            icon: `fa-solid fa-house`
         },
         {
             name: 'O mnie',
             to: '/admin/about-me',
             text: 'o mnie',
-            icon: `fa-solid fa-house fa-2xl`
+            icon: `fa-solid fa-house `
         },
         {
             name: 'Edukacja',
             to: '/admin/education',
             text: 'edukacja',
-            icon: `fa-solid fa-house fa-2xl`
+            icon: `fa-solid fa-house`
         },
 
     ],

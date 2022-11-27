@@ -2,6 +2,7 @@ import React from 'react';
 import ListItemText from '@mui/material/ListItemText';
 import ContentCut from '@mui/icons-material/ContentCut';
 import Typography from '@mui/material/Typography';
+import { Box } from '@mui/system';
 
 export const SingleListMenuItem = (props: any) => {
 
@@ -9,8 +10,10 @@ export const SingleListMenuItem = (props: any) => {
 
     return(
         <>
-            <ContentCut fontSize="small" />
+            
+            <i className={faIcon}></i>
             <ListItemText>{text}</ListItemText>
+
         </>
     )
 }

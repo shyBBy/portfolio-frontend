@@ -22,26 +22,22 @@ export const AdminSidebarMenu = () => {
     const navigation = useNavigate()
     return(
         <>
-            <Stack>
                 <MenuList>
-                    <MenuItem>
-                        <Stack>
                         {
                             navigationItems.adminMenu.map((item) => (
-                                <Link
-                                key={item.text}
-                                to={item.to}
-                                className={
-                                    location.pathname.includes(item.to) ? "menu_active" : "menu_inactive"
-                                }>
+                                <MenuItem>
+                                    <Link
+                                    key={item.text}
+                                    to={item.to}
+                                    className={
+                                        location.pathname.includes(item.to) ? "menu_active" : "menu_inactive"
+                                     }>
                                     <SingleListMenuItem faIcon={item.icon} text={item.text}/>
-                                </Link>
+                                     </Link>
+                                </MenuItem>
                             ))
                         }
-                        </Stack>
-                    </MenuItem>
                 </MenuList>
-            </Stack>
         </>
     )
 }
