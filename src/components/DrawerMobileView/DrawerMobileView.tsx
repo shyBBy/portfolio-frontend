@@ -2,8 +2,14 @@ import React from 'react'
 import {Box, Drawer} from "@mui/material";
 import {Sidebar} from "../Sidebar/Sidebar";
 import {Rightbar} from "../Rightbar/Rightbar";
+import {useAuth} from "../../hooks/useAuth";
+import {AuthenticatedApp} from "../../pages/AuthenticatedApp";
+import {UnAuthenticatedApp} from "../../pages/UnAuthenticatedApp";
+import {AdminMenu} from "../Admin/AdminMenu";
 
 export const DrawerMobileView = (props: any) => {
+
+    const { user } = useAuth();
 
     const {drawerSideBarWidth, mobileOpenSideBar, handleDrawerToggleSideBar, drawerRightBarWidth, mobileOpenRightBar, handleDrawerToggleRightBar} = props;
 
@@ -25,7 +31,7 @@ export const DrawerMobileView = (props: any) => {
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerSideBarWidth },
                     }}
                 >
-                    <Sidebar/>
+                    {user ? <AdminMenu/> : <Sidebar/> }
                 </Drawer>
                 <Drawer
                     variant="permanent"
@@ -35,7 +41,7 @@ export const DrawerMobileView = (props: any) => {
                     }}
                     open
                 >
-                    <Sidebar/>
+                    {user ? <AdminMenu/> : <Sidebar/> }
                 </Drawer>
             </Box>
             <Box component="nav"
@@ -55,7 +61,7 @@ export const DrawerMobileView = (props: any) => {
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerRightBarWidth },
                     }}
                 >
-                    <Rightbar/>
+                    {user ? '<AdminMenu/>' : <Rightbar/> }
                 </Drawer>
                 <Drawer
                     variant="permanent"
@@ -66,7 +72,7 @@ export const DrawerMobileView = (props: any) => {
                     }}
                     open
                 >
-                    <Rightbar/>
+                    {user ? '<AdminMenu/>' : <Rightbar/> }
                 </Drawer>
             </Box>
         </>
