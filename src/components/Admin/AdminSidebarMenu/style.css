@@ -1,0 +1,8 @@
+.menu_inactive {
+    color: #BDBDBD;
+}
+
+.menu_active {
+    color: #FFB400;
+    border-bottom: 1px solid #FFB400 ;
+}

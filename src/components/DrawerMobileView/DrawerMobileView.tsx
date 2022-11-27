@@ -61,7 +61,7 @@ export const DrawerMobileView = (props: any) => {
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerRightBarWidth },
                     }}
                 >
-                    {user ? <AdminSidebarMenu/> : <Rightbar/> }
+                    {user ? <AdminSidebarMenu/> : null }
                 </Drawer>
                 <Drawer
                     variant="permanent"
@@ -72,7 +72,7 @@ export const DrawerMobileView = (props: any) => {
                     }}
                     open
                 >
-                    {user ? <AdminSidebarMenu/> : <Rightbar/> }
+                    {user ? <AdminSidebarMenu/> : null }
                 </Drawer>
             </Box>
         </>

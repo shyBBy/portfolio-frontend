@@ -12,14 +12,33 @@ import ContentCopy from '@mui/icons-material/ContentCopy';
 import ContentPaste from '@mui/icons-material/ContentPaste';
 import Cloud from '@mui/icons-material/Cloud';
 import { SingleListMenuItem } from './SingleListMenuItem';
+import { navigationItems } from '../../../config/navigation';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import './style.css'
 
 export const AdminSidebarMenu = () => {
+
+    const location = useLocation()
+    const navigation = useNavigate()
     return(
         <>
             <Stack>
                 <MenuList>
                     <MenuItem>
-                        <SingleListMenuItem/>
+                        <Stack>
+                        {
+                            navigationItems.adminMenu.map((item) => (
+                                <Link
+                                key={item.text}
+                                to={item.to}
+                                className={
+                                    location.pathname.includes(item.to) ? "menu_active" : "menu_inactive"
+                                }>
+                                    <SingleListMenuItem faIcon={item.icon} text={item.text}/>
+                                </Link>
+                            ))
+                        }
+                        </Stack>
                     </MenuItem>
                 </MenuList>
             </Stack>
