@@ -34,6 +34,33 @@ export const navigationItems = {
         },
     ],
     footer: [],
+    adminMenu: [
+        {
+            name: 'Glowna',
+            to: '/admin/main',
+            text: 'glowna',
+            icon: `fa-solid fa-house fa-2xl`
+        },
+        {
+            name: 'Projekty',
+            to: '/admin/projects',
+            text: 'projekty',
+            icon: `fa-solid fa-house fa-2xl`
+        },
+        {
+            name: 'O mnie',
+            to: '/admin/about-me',
+            text: 'o mnie',
+            icon: `fa-solid fa-house fa-2xl`
+        },
+        {
+            name: 'Edukacja',
+            to: '/admin/education',
+            text: 'edukacja',
+            icon: `fa-solid fa-house fa-2xl`
+        },
+
+    ],
 
 
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import {Grid} from "@mui/material";
 import {Box} from "@mui/system";
-import art from "../../../assets/img/undraw_envelope_re_f5j4.svg";
+
 
 export const Hero = () => {
     return(
@@ -15,7 +15,7 @@ export const Hero = () => {
                     alignItems="center"
                 >
                     <Box>
-                        <img  src={art} style={{width: '30vh'}}/>
+                        <img  src='' style={{width: '30vh'}}/>
                     </Box>
                 </Grid>
             </Box>

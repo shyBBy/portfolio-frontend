@@ -5,7 +5,7 @@ import {Rightbar} from "../Rightbar/Rightbar";
 import {useAuth} from "../../hooks/useAuth";
 import {AuthenticatedApp} from "../../pages/AuthenticatedApp";
 import {UnAuthenticatedApp} from "../../pages/UnAuthenticatedApp";
-import {AdminMenu} from "../Admin/AdminMenu";
+import {AdminSidebarMenu} from "../Admin/AdminSidebarMenu/AdminSidebarMenu";
 
 export const DrawerMobileView = (props: any) => {
 
@@ -31,7 +31,7 @@ export const DrawerMobileView = (props: any) => {
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerSideBarWidth },
                     }}
                 >
-                    {user ? <AdminMenu/> : <Sidebar/> }
+                    {!user ? <AdminSidebarMenu/> : <Sidebar/> }
                 </Drawer>
                 <Drawer
                     variant="permanent"
@@ -41,7 +41,7 @@ export const DrawerMobileView = (props: any) => {
                     }}
                     open
                 >
-                    {user ? <AdminMenu/> : <Sidebar/> }
+                    {!user ? <AdminSidebarMenu/> : <Sidebar/> }
                 </Drawer>
             </Box>
             <Box component="nav"
@@ -61,7 +61,7 @@ export const DrawerMobileView = (props: any) => {
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerRightBarWidth },
                     }}
                 >
-                    {user ? '<AdminMenu/>' : <Rightbar/> }
+                    {user ? <AdminSidebarMenu/> : <Rightbar/> }
                 </Drawer>
                 <Drawer
                     variant="permanent"
@@ -72,7 +72,7 @@ export const DrawerMobileView = (props: any) => {
                     }}
                     open
                 >
-                    {user ? '<AdminMenu/>' : <Rightbar/> }
+                    {user ? <AdminSidebarMenu/> : <Rightbar/> }
                 </Drawer>
             </Box>
         </>
