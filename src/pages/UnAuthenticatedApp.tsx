@@ -10,6 +10,7 @@ import {Box, CssBaseline} from "@mui/material";
 import {AppBarMobileView} from "../components/AppBarMobileView/AppBarMobileView";
 import {DrawerMobileView} from "../components/DrawerMobileView/DrawerMobileView";
 import { useAuth } from '../hooks/useAuth';
+import { MainLayout } from '../layouts/MainLayout';
 
 const drawerSideBarWidth = 240;
 const drawerRightBarWidth = 130;
@@ -30,6 +31,7 @@ export const UnAuthenticatedApp = () => {
     };
 
     return (
+        <MainLayout>
         <>
             <Box sx={{ display: 'flex' }}>
                 <CssBaseline />
@@ -60,5 +62,6 @@ export const UnAuthenticatedApp = () => {
                 />
             </Routes>
         </>
+</MainLayout>
     );
 };

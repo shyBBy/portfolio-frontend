@@ -21,7 +21,6 @@ export const AuthenticatedApp = () => {
     return (
         <MainLayout>
             <>
-            <>
             <Box sx={{ display: 'flex' }}>
                 <CssBaseline />
                 <AppBarMobileView
@@ -44,7 +43,6 @@ export const AuthenticatedApp = () => {
                     element={<Navigate to="/admin/main" replace />}
                 />
             </Routes>
-        </>  
             </>
         </MainLayout>
     );
