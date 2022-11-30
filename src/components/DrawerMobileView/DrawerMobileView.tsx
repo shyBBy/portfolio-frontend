@@ -27,27 +27,23 @@ export const DrawerMobileView = (props: any) => {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
-                        display: { xs: 'block', sm: 'none' },
+                        display: { xs: 'block', sm: 'block', md: 'block'},
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerSideBarWidth },
                     }}
                 >
-                    {!user ? <AdminSidebarMenu/> : <Sidebar/> }
+                    {user ? <AdminSidebarMenu/> : <Sidebar/> }
                 </Drawer>
                 <Drawer
                     variant="permanent"
                     sx={{
-                        display: { xs: 'none', sm: 'block' },
+                        display: { xs: 'none', sm: 'none', md: 'none'},
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerSideBarWidth },
                     }}
                     open
                 >
-                    {!user ? <AdminSidebarMenu/> : <Sidebar/> }
+                    {user ? <AdminSidebarMenu/> : <Sidebar/> }
                 </Drawer>
             </Box>
-            <Box component="nav"
-                 sx={{ width: { sm: drawerRightBarWidth }, flexShrink: { sm: 0 } }}
-                 aria-label="mailbox folders"
-            >
                 <Drawer
                     variant="temporary"
                     anchor="right"
@@ -57,24 +53,23 @@ export const DrawerMobileView = (props: any) => {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
-                        display: { xs: 'block', sm: 'none' },
+                        display: { xs: 'block', sm: 'block', md: 'block' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerRightBarWidth },
                     }}
                 >
-                    {user ? <AdminSidebarMenu/> : null }
+                    {user ? <AdminSidebarMenu/> : <Rightbar/> }
                 </Drawer>
                 <Drawer
                     variant="permanent"
                     anchor="right"
                     sx={{
-                        display: { xs: 'none', sm: 'block' },
+                        display: { xs: 'none', sm: 'none', md: 'none' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerRightBarWidth },
                     }}
                     open
                 >
-                    {user ? <AdminSidebarMenu/> : null }
+                    {user ? <AdminSidebarMenu/> : <Rightbar/> }
                 </Drawer>
-            </Box>
         </>
     )
 }

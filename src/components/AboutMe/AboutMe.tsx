@@ -6,10 +6,7 @@ import { Box } from '@mui/system';
 export const AboutMe = () => {
     return(
         <>
-            <Box>
-                <Hero/>
-                <Content/>
-            </Box>
+            <Content/>
         </>
     )
 }

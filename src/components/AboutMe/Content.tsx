@@ -1,6 +1,6 @@
-import { Box } from '@mui/system'
+import { Box} from '@mui/system'
 import React from 'react'
-import {Button, Divider, Grid, Stack, Typography, useTheme} from "@mui/material";
+import {Button, Container, Divider, Grid, Stack, Typography, useTheme} from "@mui/material";
 import {LatestAndWIPProjectSection} from "../Feed/MainContent/LatestAndWIPProjectSection/LatestAndWIPProjectSection";
 import img from "../../assets/img/undraw_coding_re_iv62.svg";
 import graphicImg from "../../assets/img/undraw_image_viewer_re_7ejc.svg";
@@ -13,7 +13,8 @@ import webDeveloperImg from '../../assets/img/undraw_web_developer_re_h7ie.svg';
 import teamWork from '../../assets/img/undraw_team_collaboration_re_ow29.svg';
 import learnImg from '../../assets/img/undraw_learning_re_32qv.svg';
 import learnImg2 from '../../assets/img/undraw_online_learning_re_qw08.svg';
-import megaKlogo from '../../assets/img/megaKlogo.png';
+import megaKlogo from '../../assets/img/megaKlogo.png'
+import CssBaseline from '@mui/material/CssBaseline';
 
 export const Content = () => {
 
@@ -21,7 +22,8 @@ export const Content = () => {
 
     return(
         <>
-            <>
+        <CssBaseline />
+            <Container fixed>
                 <Stack
                     direction="row"
                     justifyContent="space-between"
@@ -191,7 +193,7 @@ export const Content = () => {
                         </Typography>
                     </Box>
                 </Stack>
-            </>
+            </Container>
         </>
     )
 }
