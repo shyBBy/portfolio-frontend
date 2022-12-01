@@ -4,9 +4,24 @@ import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from "@mui/material/IconButton";
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 
-export const AppBarMobileView = (props: any) => {
+const drawerSideBarWidth = 240;
+const drawerRightBarWidth = 130;
 
-    const {drawerSideBarWidth, handleDrawerToggleSideBar,handleDrawerToggleRightBar } = props;
+
+export const AppBarMobileView = () => {
+
+    const [mobileOpenSideBar, setMobileOpenSideBar] = React.useState(false);
+    const [mobileOpenRightBar, setMobileOpenRightBar] = React.useState(false);
+
+    const handleDrawerToggleSideBar = () => {
+        setMobileOpenSideBar(!mobileOpenSideBar);
+    };
+
+    const handleDrawerToggleRightBar = () => {
+        setMobileOpenRightBar(!mobileOpenRightBar);
+    };
+
+
 
     return(
         <>
@@ -42,9 +57,7 @@ export const AppBarMobileView = (props: any) => {
                                 <MenuIcon />
                             </IconButton>
                         </Grid>
-
                     </Grid>
-
                 </Toolbar>
             </AppBar>
         </>
