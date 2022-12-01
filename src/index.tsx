@@ -7,6 +7,7 @@ import {BrowserRouter} from "react-router-dom";
 import { AppProviders } from "./providers/AppProviders";
 import theme from './theme';
 import {CssBaseline} from "@mui/material";
+import { MobileViewProviders } from './providers/MobileViewProviders';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -16,7 +17,9 @@ root.render(
         <ThemeProvider theme={theme}>
             <CssBaseline/>
             <AppProviders>
-                <App />
+                <MobileViewProviders>
+                    <App />
+                </MobileViewProviders>
             </AppProviders>
         </ThemeProvider>
         

@@ -1,21 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {Box, Drawer} from "@mui/material";
 import { useAuth } from '../../hooks/useAuth';
 import { Sidebar } from './Sidebar';
 import { AdminSidebarMenu } from '../Admin/AdminSidebarMenu/AdminSidebarMenu';
 import {CssBaseline} from "@mui/material";
-
-const drawerSideBarWidth = 240;
+import { MobileViewContext } from '../../context/MobileViewContext';
 
 
 export const SidebarWrapper = () => {
+    const context = useContext(MobileViewContext);
 
+    if(!context) return null;
+
+    const {drawerSideBarWidth, mobileOpenSideBar, handleDrawerToggleSideBar} = context;
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const { user } = useAuth();
-
-    const [mobileOpenSideBar, setMobileOpenSideBar] = React.useState(false);
-    const handleDrawerToggleSideBar = () => {
-        setMobileOpenSideBar(!mobileOpenSideBar);
-    };
 
     return(
         <>
@@ -41,7 +41,7 @@ export const SidebarWrapper = () => {
                 <Drawer
                     variant="permanent"
                     sx={{
-                        display: { xs: 'none', sm: 'block'},
+                        display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'},
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerSideBarWidth },
                     }}
                     open

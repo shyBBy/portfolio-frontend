@@ -1,23 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useAuth } from "../../hooks/useAuth";
 import {Box, Drawer} from "@mui/material";
 import { Rightbar } from "./Rightbar";
 import {CssBaseline} from "@mui/material";
+import { MobileViewContext } from "../../context/MobileViewContext";
 
-const drawerRightBarWidth = 130;
 
 export const RightbarWrapper = () => {
 
+    const context = useContext(MobileViewContext);
+
+    if(!context) return null;
+
+    const {mobileOpenRightBar, handleDrawerToggleRightBar, drawerRightBarWidth} = context;
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const { user } = useAuth();
 
-    const [mobileOpenRightBar, setMobileOpenRightBar] = React.useState(false);
-    
-    const handleDrawerToggleRightBar = () => {
-        setMobileOpenRightBar(!mobileOpenRightBar);
-    };
 
     return(
-        <>
+            <>
             <CssBaseline />
             {/* <Box component="div"
                  sx={{ width: { sm: drawerSideBarWidth }, flexShrink: { sm: 0 } }}
@@ -44,7 +46,7 @@ export const RightbarWrapper = () => {
                     variant="permanent"
                     anchor="right"
                     sx={{
-                        display: { xs: 'none', sm: 'block'},
+                        display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'},
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerRightBarWidth },
                     }}
                     open

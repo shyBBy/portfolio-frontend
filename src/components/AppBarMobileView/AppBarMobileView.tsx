@@ -1,35 +1,26 @@
-import React from 'react'
+import React, { createContext, useContext } from 'react'
 import {AppBar, Box, Grid, Stack, Toolbar, Typography} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from "@mui/material/IconButton";
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
-
-const drawerSideBarWidth = 240;
-const drawerRightBarWidth = 130;
+import { MobileViewContext } from '../../context/MobileViewContext';
 
 
 export const AppBarMobileView = () => {
 
-    const [mobileOpenSideBar, setMobileOpenSideBar] = React.useState(false);
-    const [mobileOpenRightBar, setMobileOpenRightBar] = React.useState(false);
+    const context = useContext(MobileViewContext);
 
-    const handleDrawerToggleSideBar = () => {
-        setMobileOpenSideBar(!mobileOpenSideBar);
-    };
+    if(!context) return null;
 
-    const handleDrawerToggleRightBar = () => {
-        setMobileOpenRightBar(!mobileOpenRightBar);
-    };
-
-
+    const {drawerSideBarWidth, handleDrawerToggleSideBar, handleDrawerToggleRightBar} = context;
 
     return(
         <>
             <AppBar
                 position="fixed"
                 sx={{
-                    width: { sm: `calc(100% - ${drawerSideBarWidth}px)`, md: `calc(100% - ${drawerSideBarWidth}px)` },
-                    ml: { sm: `${drawerSideBarWidth}px`, md: `${drawerSideBarWidth}px`  },
+                    width: { md: `calc(100% - ${drawerSideBarWidth}px)` },
+                    ml: { md: `${drawerSideBarWidth}px`  },
                     display: { lg: 'none', xl:'none'}
                 }}
             >
@@ -41,7 +32,7 @@ export const AppBarMobileView = () => {
                                 aria-label="open drawer"
                                 edge="start"
                                 onClick={handleDrawerToggleSideBar}
-                                sx={{ mr: 2, display: { sm: 'none' } }}
+                                sx={{ mr: 2, display: { md: 'none' } }}
                             >
                                 <FormatListBulletedIcon />
                             </IconButton>
@@ -52,7 +43,7 @@ export const AppBarMobileView = () => {
                                 aria-label="open drawer"
                                 edge="start"
                                 onClick={handleDrawerToggleRightBar}
-                                sx={{ mr: 2, display: { sm: 'none' } }}
+                                sx={{ mr: 2, display: { md: 'none' } }}
                             >
                                 <MenuIcon />
                             </IconButton>
