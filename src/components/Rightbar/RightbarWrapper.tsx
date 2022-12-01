@@ -34,7 +34,7 @@ export const RightbarWrapper = () => {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
-                        display: { xs: 'block', sm: 'block', md: 'block' },
+                        display: { xs: 'block', sm: 'none' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerRightBarWidth },
                     }}
                 >
@@ -44,7 +44,7 @@ export const RightbarWrapper = () => {
                     variant="permanent"
                     anchor="right"
                     sx={{
-                        display: { xs: 'none', sm: 'none', md: 'none' },
+                        display: { xs: 'none', sm: 'block'},
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerRightBarWidth },
                     }}
                     open
