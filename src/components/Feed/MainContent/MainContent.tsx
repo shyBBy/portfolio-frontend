@@ -8,9 +8,9 @@ export const MainContent = () => {
 
     return(
         <>
-                <TechStack/>
-                <Divider/>
-                <LatestAndWIPProjectSection/>
+                <Box sx={{ flexGrow: 1 }}>
+                    <TechStack/>
+                </Box>
         </>
     )
 }
