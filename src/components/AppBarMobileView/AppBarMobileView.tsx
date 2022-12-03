@@ -21,7 +21,7 @@ export const AppBarMobileView = () => {
                 sx={{
                     width: { md: `calc(100% - ${drawerSideBarWidth}px)` },
                     ml: { md: `${drawerSideBarWidth}px`  },
-                    display: { lg: 'none', xl:'none'}
+                    display: { sm: 'none', md: 'none' ,lg: 'none', xl:'none'},
                 }}
             >
                 <Toolbar>

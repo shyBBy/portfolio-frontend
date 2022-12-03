@@ -27,7 +27,7 @@ export const DrawerMobileView = (props: any) => {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
-                        display: { xs: 'block', sm: 'block', md: 'block'},
+                        display: { xs: 'block', sm: 'none', md: 'block'},
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerSideBarWidth },
                     }}
                 >
@@ -53,7 +53,7 @@ export const DrawerMobileView = (props: any) => {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
-                        display: { xs: 'block', sm: 'block', md: 'block' },
+                        display: { xs: 'block', sm: 'none', md: 'block' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerRightBarWidth },
                     }}
                 >

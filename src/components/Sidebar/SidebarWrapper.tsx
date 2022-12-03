@@ -32,7 +32,7 @@ export const SidebarWrapper = () => {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
-                        display: { xs: 'block', sm: 'block'},
+                        display: { xs: 'block', sm: 'none'},
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerSideBarWidth },
                     }}
                 >

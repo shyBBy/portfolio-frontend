@@ -20,16 +20,17 @@ export const Stack = () => {
     return(
         <>
             <Box>
-                <ImageList sx={{ width: 500, height: 650 }} cols={3} rowHeight={100} style={{ overflow: `hidden` }}>
+                <ImageList sx={{ width: {xs: '200px'}, height: {xs: 'auto'}, marginLeft: '25%'}} cols={3} rowHeight={100} style={{ overflow: `hidden` }}>
                     {itemData.map((item) => (
-                        <ImageListItem key={item.img}>
+                        <ImageListItem key={item.img} >
                             <LightTooltip title={item.languageName}>
+                            
                                 <img
                                     src={`${item.img}?w=100&h=100&fit=crop&auto=format`}
                                     srcSet={`${item.img}?w=100&h=100&fit=crop&auto=format&dpr=2 2x`}
                                     alt={item.languageName}
                                     loading="lazy"
-                                    style={{width: '120px', height: '120px'}}
+                                    // style={{width: '120px', height: '120px'}}
                                 />
                             </LightTooltip>
                         </ImageListItem>
