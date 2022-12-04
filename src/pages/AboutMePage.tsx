@@ -5,7 +5,7 @@ import {AboutMe} from "../components/AboutMe/AboutMe";
 export const AboutMePage = () => {
     return(
         <>
-            <Container fixed>
+            <Container>
                 <AboutMe/>
             </Container>
         </>
