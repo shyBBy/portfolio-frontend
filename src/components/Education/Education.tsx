@@ -6,10 +6,8 @@ import {Box} from "@mui/system";
 export const Education = () => {
     return(
         <>
-            <Box>
-                <Hero/>
-                <TimeLine/>
-            </Box>
+            {/* <Hero/> */}
+            <TimeLine/>
         </>
     )
 }

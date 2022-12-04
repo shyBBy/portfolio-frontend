@@ -2,8 +2,14 @@ import React from 'react'
 import {Box, Drawer} from "@mui/material";
 import {Sidebar} from "../Sidebar/Sidebar";
 import {Rightbar} from "../Rightbar/Rightbar";
+import {useAuth} from "../../hooks/useAuth";
+import {AuthenticatedApp} from "../../pages/AuthenticatedApp";
+import {UnAuthenticatedApp} from "../../pages/UnAuthenticatedApp";
+import {AdminSidebarMenu} from "../Admin/AdminSidebarMenu/AdminSidebarMenu";
 
 export const DrawerMobileView = (props: any) => {
+
+    const { user } = useAuth();
 
     const {drawerSideBarWidth, mobileOpenSideBar, handleDrawerToggleSideBar, drawerRightBarWidth, mobileOpenRightBar, handleDrawerToggleRightBar} = props;
 
@@ -21,27 +27,23 @@ export const DrawerMobileView = (props: any) => {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
-                        display: { xs: 'block', sm: 'none' },
+                        display: { xs: 'block', sm: 'none', md: 'block'},
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerSideBarWidth },
                     }}
                 >
-                    <Sidebar/>
+                    {user ? <AdminSidebarMenu/> : <Sidebar/> }
                 </Drawer>
                 <Drawer
                     variant="permanent"
                     sx={{
-                        display: { xs: 'none', sm: 'block' },
+                        display: { xs: 'none', sm: 'none', md: 'none'},
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerSideBarWidth },
                     }}
                     open
                 >
-                    <Sidebar/>
+                    {user ? <AdminSidebarMenu/> : <Sidebar/> }
                 </Drawer>
             </Box>
-            <Box component="nav"
-                 sx={{ width: { sm: drawerRightBarWidth }, flexShrink: { sm: 0 } }}
-                 aria-label="mailbox folders"
-            >
                 <Drawer
                     variant="temporary"
                     anchor="right"
@@ -51,24 +53,23 @@ export const DrawerMobileView = (props: any) => {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
-                        display: { xs: 'block', sm: 'none' },
+                        display: { xs: 'block', sm: 'none', md: 'block' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerRightBarWidth },
                     }}
                 >
-                    <Rightbar/>
+                    {user ? <AdminSidebarMenu/> : <Rightbar/> }
                 </Drawer>
                 <Drawer
                     variant="permanent"
                     anchor="right"
                     sx={{
-                        display: { xs: 'none', sm: 'block' },
+                        display: { xs: 'none', sm: 'none', md: 'none' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerRightBarWidth },
                     }}
                     open
                 >
-                    <Rightbar/>
+                    {user ? <AdminSidebarMenu/> : <Rightbar/> }
                 </Drawer>
-            </Box>
         </>
     )
 }

@@ -8,16 +8,16 @@ export const TechStack = () => {
 
     return(
         <>
-            <Box p='20px'>
-                <Grid container >
-                    <Grid xs={8}>
-                        <Stack/>
+            <Box sx={{ flexGrow: 1 }}>
+                    <Grid container spacing={{ xs: 2, md: 2 }} columns={{ xs: 2, sm: 2, md: 12 }}>
+                        <Grid item xs={2} sm={2} md={6}>
+                            <Stack/>
+                        </Grid>
+                        <Grid item xs={2} sm={2} md={6}>
+                            <Illustration/>
+                        </Grid>
                     </Grid>
-                    <Grid xs={4} >
-                        <Illustration/>
-                    </Grid>
-                </Grid>
-            </Box>
+                </Box>
         </>
     )
 }
