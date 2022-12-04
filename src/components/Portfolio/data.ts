@@ -10,7 +10,7 @@ export const Data = {
     project: [
         {
             title: `BookingVisitApp`,
-            description: 'Aplikacja do umawiania wizyt lekarskich w konkretnej placówce medycznej.',
+            description: 'Aplikacja do umawiania wizyt lekarskich w konkretnej placówce medycznej. Stworzona podczas odbywania kursu MegaK. Projekt zaliczeniowy, który dał mi dostęp do bonusowego etapu.',
             image: bookingVisitApp,
             tags: ['nodejs', 'handlebars', 'bootstrap', 'javascript', 'mysql'],
             source: 'https://github.com/shyBBy/bookingVisitApp',
@@ -20,7 +20,7 @@ export const Data = {
         },
         {
             title: `TodoList`,
-            description: 'Prosta, najzwyklejsza aplikacja TO-DO. ',
+            description: 'Prosta, najzwyklejsza aplikacja TO-DO.  ',
             image: todoapp,
             tags: ['nodejs', 'handlebars', 'bootstrap', 'javascript', 'mysql'],
             source: 'https://github.com/shyBBy/bookingVisitApp',
@@ -30,11 +30,11 @@ export const Data = {
         },
         {
             title: `HeadHunter`,
-            description: 'Projekt z bonusowego etapu kursu MegaK. Aplikacja do rekrutowania programistów przez potencjalnego pracodawce.',
+            description: 'Projekt z bonusowego etapu kursu MegaK. Aplikacja do rekrutowania programistów przez potencjalnego pracodawce. Pracowałem nad częścią backendu.',
             image: app2,
             tags: ['nestjs', 'React', 'MaterialUI', 'typescript', 'PostrgreSQL', 'TypeORM', 'Docker'],
-            source: 'https://github.com/shyBBy/bookingVisitApp',
-            liveVersion: 'https://dawidolczak.networkmanager.pl/user/login',
+            source: 'https://gitlab.com/megak/megak_backend',
+            liveVersion: '',
             id: 2,
 
         },

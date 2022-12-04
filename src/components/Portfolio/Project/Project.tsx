@@ -38,7 +38,7 @@ export const Project = (props: any) => {
                             <a href={project.source} style={{textDecoration: 'none'}}>
                                 <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
                                     <Typography variant={'subtitle2'}  display={'inline-block'}>
-                                        ŹRÓDŁO
+                                        {project.source}
                                     </Typography>
                                 </Button>
                             </a>
@@ -46,7 +46,7 @@ export const Project = (props: any) => {
                             <a href={project.liveVersion} style={{textDecoration: 'none'}}>
                                 <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
                                     <Typography variant={'subtitle2'}  display={'inline-block'}>
-                                        DEMO
+                                        {project.liveVersion}
                                     </Typography>
                                 </Button>
                             </a>
