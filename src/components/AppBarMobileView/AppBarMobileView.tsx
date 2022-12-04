@@ -1,21 +1,27 @@
-import React from 'react'
+import React, { createContext, useContext } from 'react'
 import {AppBar, Box, Grid, Stack, Toolbar, Typography} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from "@mui/material/IconButton";
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import { MobileViewContext } from '../../context/MobileViewContext';
 
-export const AppBarMobileView = (props: any) => {
 
-    const {drawerSideBarWidth, handleDrawerToggleSideBar,handleDrawerToggleRightBar } = props;
+export const AppBarMobileView = () => {
+
+    const context = useContext(MobileViewContext);
+
+    if(!context) return null;
+
+    const {drawerSideBarWidth, handleDrawerToggleSideBar, handleDrawerToggleRightBar} = context;
 
     return(
         <>
             <AppBar
                 position="fixed"
                 sx={{
-                    width: { sm: `calc(100% - ${drawerSideBarWidth}px)` },
-                    ml: { sm: `${drawerSideBarWidth}px` },
-                    display: { xl: "none", lg: 'none', sm: 'none'}
+                    width: { md: `calc(100% - ${drawerSideBarWidth}px)` },
+                    ml: { md: `${drawerSideBarWidth}px`  },
+                    display: { sm: 'none', md: 'none' ,lg: 'none', xl:'none'},
                 }}
             >
                 <Toolbar>
@@ -26,7 +32,7 @@ export const AppBarMobileView = (props: any) => {
                                 aria-label="open drawer"
                                 edge="start"
                                 onClick={handleDrawerToggleSideBar}
-                                sx={{ mr: 2, display: { sm: 'none' } }}
+                                sx={{ mr: 2, display: { md: 'none' } }}
                             >
                                 <FormatListBulletedIcon />
                             </IconButton>
@@ -37,14 +43,12 @@ export const AppBarMobileView = (props: any) => {
                                 aria-label="open drawer"
                                 edge="start"
                                 onClick={handleDrawerToggleRightBar}
-                                sx={{ mr: 2, display: { sm: 'none' } }}
+                                sx={{ mr: 2, display: { md: 'none' } }}
                             >
                                 <MenuIcon />
                             </IconButton>
                         </Grid>
-
                     </Grid>
-
                 </Toolbar>
             </AppBar>
         </>
