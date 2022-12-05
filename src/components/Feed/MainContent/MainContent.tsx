@@ -10,6 +10,7 @@ export const MainContent = () => {
         <>
                 <Box sx={{ flexGrow: 1 }}>
                     <TechStack/>
+                   <LatestAndWIPProjectSection/>
                 </Box>
         </>
     )
