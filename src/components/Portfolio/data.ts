@@ -38,6 +38,16 @@ export const Data = {
             id: 2,
 
         },
+        {
+            title: `Portfolio`,
+            description: 'Projekt mojej własnej strony - portfolio. Aplikacja ta posiada panel administratora, dzięki któremu można zarządzać treścią strony. ',
+            image: app2,
+            tags: ['React', 'MaterialUI', 'typescript', ],
+            source: 'https://github.com/shyBBy/portfolio-frontend',
+            liveVersion: 'https://dev-olczak.pl',
+            id: 3,
+
+        },
 
     ],
     graphic2d: [
