@@ -7,7 +7,7 @@ export const LatestAndWIPProjectSection = ()=> {
     const theme = useTheme();
     return(
         <>
-          <Cssbaseline/>
+          <CssBaseline/>
           <Container fixed>
             Stack
                     direction={{ xs: 'column', sm: 'row' }}
