@@ -9,7 +9,7 @@ export const LatestAndWIPProjectSection = ()=> {
         <>
           <CssBaseline/>
           <Container fixed>
-            Stack
+            <Stack
                     direction={{ xs: 'column', sm: 'row' }}
                     justifyContent="space-between"
                     alignItems="center"
