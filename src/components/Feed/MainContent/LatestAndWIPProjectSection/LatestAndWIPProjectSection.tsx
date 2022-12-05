@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Grid, Typography, useTheme, Stack, List, ListItem, Divider, Stack} from "@mui/material";
+import {Box, Grid, Typography, useTheme, Stack, List, ListItem, Divider} from "@mui/material";
 import CssBaseline from '@mui/material/CssBaseline';
 
 
