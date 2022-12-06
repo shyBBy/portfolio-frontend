@@ -52,25 +52,55 @@ export const Data = {
     ],
     graphic2d: [
         {
-            title: `Aplikacja 6`,
-            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
-            image: app6,
-            tags: ['nodejs', 'handlebars', 'bootstrap', 'javascript', 'mysql'],
-            source: 'https://github.com/shyBBy/bookingVisitApp',
-            liveVersion: 'https://dawidolczak.networkmanager.pl/user/login',
-            id: 6,
+            title: `LOGO`,
+            description: 'Logo firmy.',
+            image: 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/ae819b104189149.5f5dbb67f18b3.png',
+            tags: ['photoshop'],
+            source: '',
+            liveVersion: '',
+            id: 4,
+
+        },
+        {
+            title: `Ulotka`,
+            description: 'Projekt ulotki na zlecenie dla firmy',
+            image: 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/bf2b0599735923.5ef9b86067250.png',
+            tags: ['photoshop'],
+            source: '',
+            liveVersion: '',
+            id: 5,
+
+        },
+        {
+          title: `Wizytowka`,
+          description: 'Wizytowka na zlecenie.',
+          image: 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6043ed99735923.5ef9b86066a11.png',
+          tags: ['photoshop'],
+          source: '',
+          liveVersion: '',
+          id: 6,
+        
+        },
+        {
+            title: `Dashboard layout `,
+            description: 'Po kliknięciu w przycisk "źródło" zobaczyć będzie można całą galerię projektów.',
+            image: app2,
+            tags: ['photoshop'],
+            source: 'https://www.behance.net/gallery/90022991/Stuff-for-GTA-SA-server-RolePlay',
+            liveVersion: '',
+            id: 7,
 
         },
     ],
     graphic3d: [
         {
-            title: `Aplikacja 6`,
-            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s',
-            image: app6,
-            tags: ['nodejs', 'handlebars', 'bootstrap', 'javascript', 'mysql'],
-            source: 'https://github.com/shyBBy/bookingVisitApp',
-            liveVersion: 'https://dawidolczak.networkmanager.pl/user/login',
-            id: 6,
+            title: `Modele 3D`,
+            description: 'Pod przyciskiem "źródło" znajduje się lista większości modeli 3D mojego autorstwa do gry Gta San Andreas',
+            image: 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/59a75e101926593.5f2a9e8267c6a.png',
+            tags: ['3DSmax'],
+            source: 'https://www.behance.net/gallery/101926593/3D-models-for-GTASA-SAMP-server',
+            liveVersion: '',
+            id: 8,
 
         },
     ]
