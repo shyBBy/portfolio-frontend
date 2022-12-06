@@ -34,7 +34,7 @@ export const AppBarMobileView = () => {
                                 onClick={handleDrawerToggleSideBar}
                                 sx={{ mr: 2, display: { md: 'none' } }}
                             >
-                                <FormatListBulletedIcon />
+                                <FormatListBulletedIcon /> 
                             </IconButton>
                         </Grid>
                         <Grid xs={8} textAlign={'right'}>
