@@ -1,4 +1,4 @@
-import {Box, Container} from '@mui/material'
+import {Box, Container, Grid} from '@mui/material'
 import React from 'react'
 import Stack from '@mui/material/Stack';
 import {Hero} from "./Hero/Hero";
