@@ -4,7 +4,7 @@ export const Data = {
         {
             title: `BookingVisitApp`,
             description: 'Aplikacja do umawiania wizyt lekarskich w konkretnej placówce medycznej. Stworzona podczas odbywania kursu MegaK. Projekt zaliczeniowy, który dał mi dostęp do bonusowego etapu.',
-            image: 'booking',
+            image: 'https://i.imgur.com/up7liec.jpeg',
             tags: ['nodejs', 'handlebars', 'bootstrap', 'javascript', 'mysql'],
             source: 'https://github.com/shyBBy/bookingVisitApp',
             liveVersion: 'https://dawidolczak.networkmanager.pl/user/login',
@@ -14,7 +14,7 @@ export const Data = {
         {
             title: `TodoList`,
             description: 'Prosta, najzwyklejsza aplikacja TO-DO.  ',
-            image: 'img2',
+            image: 'https://i.imgur.com/gwNaDCF.jpeg',
             tags: ['nodejs', 'handlebars', 'bootstrap', 'javascript', 'mysql'],
             source: 'https://github.com/shyBBy/bookingVisitApp',
             liveVersion: 'https://dawidolczak.networkmanager.pl/user/login',
@@ -24,7 +24,7 @@ export const Data = {
         {
             title: `HeadHunter`,
             description: 'Projekt z bonusowego etapu kursu MegaK. Aplikacja do rekrutowania programistów przez potencjalnego pracodawce. Pracowałem nad częścią backendu.',
-            image: 'headhunter',
+            image: 'https://i.imgur.com/CrSqdIB.jpeg',
             tags: ['nestjs', 'React', 'MaterialUI', 'typescript', 'PostrgreSQL', 'TypeORM', 'Docker'],
             source: 'https://gitlab.com/megak/megak_backend',
             liveVersion: '',
@@ -34,7 +34,7 @@ export const Data = {
         {
             title: `Portfolio`,
             description: 'Projekt mojej własnej strony - portfolio. Aplikacja ta posiada panel administratora, dzięki któremu można zarządzać treścią strony. ',
-            image: 'portfolio',
+            image: 'https://i.imgur.com/KkJTHqo.jpeg',
             tags: ['React', 'MaterialUI', 'typescript', ],
             source: 'https://github.com/shyBBy/portfolio-frontend',
             liveVersion: 'https://dev-olczak.pl',
@@ -47,7 +47,7 @@ export const Data = {
         {
             title: `LOGO`,
             description: 'Logo firmy.',
-            image: 'logo',
+            image: 'https://i.imgur.com/hsaWdDt.png',
             tags: ['photoshop'],
             source: '',
             liveVersion: '',
@@ -57,7 +57,7 @@ export const Data = {
         {
             title: `Ulotka`,
             description: 'Projekt ulotki na zlecenie dla firmy',
-            image: 'ulotka',
+            image: 'https://i.imgur.com/mkPzGEc.png',
             tags: ['photoshop'],
             source: '',
             liveVersion: '',
@@ -67,7 +67,7 @@ export const Data = {
         {
           title: `Wizytowka`,
           description: 'Wizytowka na zlecenie.',
-          image: 'wizytowka',
+          image: 'https://i.imgur.com/sxUC0ct.png',
           tags: ['photoshop'],
           source: '',
           liveVersion: '',
@@ -77,7 +77,7 @@ export const Data = {
         {
             title: `Dashboard layout `,
             description: 'Po kliknięciu w przycisk "źródło" zobaczyć będzie można całą galerię projektów.',
-            image: 'dashboard',
+            image: 'https://i.imgur.com/U0AirUM.png',
             tags: ['photoshop'],
             source: 'https://www.behance.net/gallery/90022991/Stuff-for-GTA-SA-server-RolePlay',
             liveVersion: '',
@@ -89,7 +89,7 @@ export const Data = {
         {
             title: `Modele 3D`,
             description: 'Pod przyciskiem "źródło" znajduje się lista większości modeli 3D mojego autorstwa do gry Gta San Andreas',
-            image: 'modele3d',
+            image: 'https://i.imgur.com/z4iohAj.png',
             tags: ['3DSmax'],
             source: 'https://www.behance.net/gallery/101926593/3D-models-for-GTASA-SAMP-server',
             liveVersion: '',
