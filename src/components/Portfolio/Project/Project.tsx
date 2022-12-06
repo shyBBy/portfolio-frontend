@@ -12,7 +12,7 @@ import {
     useTheme
 } from "@mui/material";
 import portfolio from '../../../assets/img/portfolio.png'
-import logo from '../../../assets/img/59'
+import logo from '../../../assets/img/logo.png'
 import wizytowka from '../../../assets/img/wizytowka.png'
 import ulotka from '../../../assets/img/ulotka.png'
 import booking from '../../../assets/img/booking.jpg'
