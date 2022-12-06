@@ -11,7 +11,15 @@ import {
     Typography,
     useTheme
 } from "@mui/material";
-import img from '../../../assets/img/bg4.jpg'
+import portfolio from '../../../assets/img/portfolio.png'
+import logo from '../../../assets/img/logo.png'
+import wizytowka from '../../../assets/img/wizytowka.png'
+import ulotka from '../../../assets/img/ulotka.png'
+import booking from '../../../assets/img/booking.jpg'
+import dashboard from '../../../assets/img/dashboard.png'
+import modele3d from '../../../assets/img/modele3d.png'
+import headhunter from '../../../assets/img/headhunter.jpg'
+import img2 from '../../../assets/img/bg4.jpg'
 
 export const Project = (props: any) => {
     const theme = useTheme();
@@ -22,7 +30,7 @@ export const Project = (props: any) => {
         <>
                 <Card sx={{maxWidth: 375, margin: '1rem'}}>
                     <CardActionArea>
-                        <CardMedia component='img' image={img}/>
+                        <CardMedia component='img' image={project.image}/>
                         <CardContent>
                             <Typography variant='h5' component="div">
                                 {project.title}
@@ -38,7 +46,7 @@ export const Project = (props: any) => {
                             <a href={project.source} style={{textDecoration: 'none'}}>
                                 <Button size="small" style={{backgroundColor: "#ffc107"}} variant="contained">
                                     <Typography variant={'subtitle2'}  display={'inline-block'}>
-                                        ŹRÓDŁO
+                                        REPOZYTORIUM 
                                     </Typography>
                                 </Button>
                             </a>

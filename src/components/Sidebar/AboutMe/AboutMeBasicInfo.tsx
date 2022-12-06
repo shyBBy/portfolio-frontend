@@ -35,8 +35,8 @@ export const AboutMeBasicInfo = () => {
                     </Grid>
                     <Grid xs={8} textAlign='right'>
                         <Typography variant={'body1'} color={theme.palette.secondary.main}>Polska, Łódź</Typography>
-                        <Typography variant={'body1'} color={theme.palette.secondary.main}>27</Typography>
-                        <Typography variant={'body1'} color={theme.palette.secondary.main}>Wolny</Typography>
+                        <Typography variant={'body1'} color={theme.palette.secondary.main}>26</Typography>
+                        <Typography variant={'body1'} color={theme.palette.secondary.main}>Freelancer</Typography>
                     </Grid>
                 </Grid>
             </Box>

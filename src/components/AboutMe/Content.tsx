@@ -25,10 +25,10 @@ export const Content = () => {
         <CssBaseline />
             <Container fixed>
                 <Stack
-                    direction="row"
+                    direction={{ xs: 'column', sm: 'row' }}
                     justifyContent="space-between"
                     alignItems="center"
-                    spacing={2}
+                    spacing={{ xs: 1, sm: 2, md: 4 }}
                 >
                     <Box>
                         <Typography variant="h1" fontSize={'20px'} component="span" color={theme.palette.primary.main}>[Kilka słów o mnie - tak na początek]</Typography>
@@ -49,10 +49,10 @@ export const Content = () => {
                     </Box>
                 </Stack>
                 <Stack
-                    direction="row"
+                    direction={{ xs: 'column', sm: 'row' }}
                     justifyContent="space-between"
                     alignItems="center"
-                    spacing={2}
+                    spacing={{ xs: 1, sm: 2, md: 4 }}
                 >
                     <Box>
                         <img
@@ -79,10 +79,10 @@ export const Content = () => {
                     </Box>
                 </Stack>
                 <Stack
-                    direction="row"
+                    direction={{ xs: 'column', sm: 'row' }}
                     justifyContent="space-between"
                     alignItems="center"
-                    spacing={2}
+                    spacing={{ xs: 1, sm: 2, md: 4 }}
                 >
                     <Box>
                         <Typography variant="h1" fontSize={'20px'} component="span" color={theme.palette.primary.main}>[Pierwsze strony i projekty graficzne]</Typography>
@@ -109,10 +109,10 @@ export const Content = () => {
                     </Box>
                 </Stack>
                 <Stack
-                    direction="row"
+                    direction={{ xs: 'column', sm: 'row' }}
                     justifyContent="space-between"
                     alignItems="center"
-                    spacing={2}
+                    spacing={{ xs: 1, sm: 2, md: 4 }}
                 >
                     <Box>
                         <img
@@ -133,10 +133,10 @@ export const Content = () => {
                     </Box>
                 </Stack>
                 <Stack
-                    direction="row"
+                    direction={{ xs: 'column', sm: 'row' }}
                     justifyContent="space-between"
                     alignItems="center"
-                    spacing={2}
+                    spacing={{ xs: 1, sm: 2, md: 4 }}
                 >
                     <Box>
                         <Typography variant="h1" fontSize={'20px'} component="span" color={theme.palette.primary.main}>[Początki w świecie programowania - kursy i cerftyfikaty]</Typography>
@@ -162,10 +162,10 @@ export const Content = () => {
                     </Box>
                 </Stack>
                 <Stack
-                    direction="row"
+                    direction={{ xs: 'column', sm: 'row' }}
                     justifyContent="space-between"
                     alignItems="center"
-                    spacing={2}
+                    spacing={{ xs: 1, sm: 2, md: 4 }}
                 >
                     <Box>
                         <img
