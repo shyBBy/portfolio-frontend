@@ -4,7 +4,7 @@ export const Data = {
         {
             title: `BookingVisitApp`,
             description: 'Aplikacja do umawiania wizyt lekarskich w konkretnej placówce medycznej. Stworzona podczas odbywania kursu MegaK. Projekt zaliczeniowy, który dał mi dostęp do bonusowego etapu.',
-            image: 'https://i.imgur.com/up7liec.jpeg',
+            image: 'https://i.imgur.com/X9KnAZM.jpeg',
             tags: ['nodejs', 'handlebars', 'bootstrap', 'javascript', 'mysql'],
             source: 'https://github.com/shyBBy/bookingVisitApp',
             liveVersion: 'https://dawidolczak.networkmanager.pl/user/login',
@@ -57,7 +57,7 @@ export const Data = {
         {
             title: `Ulotka`,
             description: 'Projekt ulotki na zlecenie dla firmy',
-            image: 'https://i.imgur.com/mkPzGEc.png',
+            image: 'https://i.imgur.com/vTLqU6a.png',
             tags: ['photoshop'],
             source: '',
             liveVersion: '',
@@ -67,7 +67,7 @@ export const Data = {
         {
           title: `Wizytowka`,
           description: 'Wizytowka na zlecenie.',
-          image: 'https://i.imgur.com/sxUC0ct.png',
+          image: 'https://i.imgur.com/49lnAMB.png',
           tags: ['photoshop'],
           source: '',
           liveVersion: '',
