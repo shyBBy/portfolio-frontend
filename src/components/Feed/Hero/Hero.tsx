@@ -12,8 +12,15 @@ export const Hero = () => {
 
     return(
         <>
-            <Box sx={{backgroundImage: `url(${bg})`}}>
-              <Box sx={{background: `rgba(32,32,32,0.8)`}}>
+            <Box sx={{
+            backgroundImage: `linear-gradient(rgba(32, 32, 32, 0.8), rgba(32, 32, 32, 0.8)), url(${bg})`, 
+              height: '50%',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+             
+            }}>
+              
                 <Grid container spacing={{ xs: 2, md: 3, xl: 2 }} columns={{ xs: 4, sm: 8, md: 12, lg: 12, xl: 25 }}>
                 <Grid item xs={2} sm={2} md={2} lg={2} xl={1}>
                   <p>jestem dawid</p>
@@ -25,7 +32,7 @@ export const Hero = () => {
                   tu krótki opis
                 </Grid>
               </Grid>
-              </Box>
+             
             </Box>
         </>
     )
