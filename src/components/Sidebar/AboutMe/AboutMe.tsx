@@ -17,6 +17,9 @@ export const AboutMe = () => {
                 <Typography variant="caption" component="p" style={{ textAlign: 'center', color: '#9e9e9e' }}>
                     Full-Stack developer
                 </Typography>
+                <Typography variant="caption" component="p" style={{ textAlign: 'center', color: '#9e9e9e' }}>
+                    kontakt@dev-olczak.pl
+                </Typography>
             </Box>
             <Divider />
             <div style={{ overflow: `hidden` }}>
