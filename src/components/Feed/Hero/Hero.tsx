@@ -4,7 +4,7 @@ import art from '../../../assets/img/undraw_hello_re_3evm.svg'
 import './Hero.css'
 import {Link} from "react-router-dom";
 
-import bg from '../../../assets/bg4.jpg'
+import bg from '../../../assets/img/bg4.jpg'
 
 export const Hero = () => {
 
@@ -13,7 +13,8 @@ export const Hero = () => {
     return(
         <>
             <Box sx={{backgroundImage: `url(${bg})`}}>
-              <Grid container spacing={{ xs: 2, md: 3, xl: 2 }} columns={{ xs: 4, sm: 8, md: 12, lg: 12, xl: 25 }}>
+              <Box sx={{background: `rgba(32,32,32,0.8)`}}>
+                <Grid container spacing={{ xs: 2, md: 3, xl: 2 }} columns={{ xs: 4, sm: 8, md: 12, lg: 12, xl: 25 }}>
                 <Grid item xs={2} sm={2} md={2} lg={2} xl={1}>
                   <p>jestem dawid</p>
                 </Grid>
@@ -24,6 +25,7 @@ export const Hero = () => {
                   tu krótki opis
                 </Grid>
               </Grid>
+              </Box>
             </Box>
         </>
     )
