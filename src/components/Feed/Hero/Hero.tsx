@@ -30,7 +30,7 @@ export const Hero = () => {
                 <Grid item xs={2} sm={2} md={2} lg={2} xl={1}>
                   <img 
                   src={art}
-                  sizes="(maxWidth: 300px) 100px, (maxWidth: 768px) 768px, 1280px" />
+                  sizes="(max-width: 300px) 100px, (max-width: 768px) 768px, 1280px" />
                 </Grid>
                 <Grid item xs={2} sm={2} md={2} lg={2} xl={1}>
                    <Typography variant={'body1'}>Uczący się Full-Stack Developer, jeśli chcesz dowiedzieć się czegoś więcej o mojej historii w programowaniu oraz życiu nie związanym z branża to kliknij w poniższy przycisk lub skorzystaj z bocznego menu :)
