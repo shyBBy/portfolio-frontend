@@ -45,7 +45,7 @@ export const Rightbar = () => {
                       <a href='mailto: kontakt@dev-olczak.pl'>
                                               <Box p={2} textAlign={'center'}> 
                         <Tooltip title={'Napisz do mnie'} placement={"top"}>
-                                            <i className={'fa-solid fa-message fa-2xl'}></i>
+                                            <i className={'fa-solid fa-message fa-2xl rightbar_inactive'}></i>
                                         </Tooltip>
                       
                       </Box>  

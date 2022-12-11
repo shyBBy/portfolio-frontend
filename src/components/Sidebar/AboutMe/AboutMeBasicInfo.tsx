@@ -32,11 +32,13 @@ export const AboutMeBasicInfo = () => {
                         <Typography variant={'body1'}>Lokalizacja:</Typography>
                         <Typography variant={'body1'}>Wiek:</Typography>
                         <Typography variant={'body1'}>Status:</Typography>
+                        <Typography variant={'body1'}>E-mail:</Typography>
                     </Grid>
                     <Grid xs={8} textAlign='right'>
                         <Typography variant={'body1'} color={theme.palette.secondary.main}>Polska, Łódź</Typography>
                         <Typography variant={'body1'} color={theme.palette.secondary.main}>26</Typography>
                         <Typography variant={'body1'} color={theme.palette.secondary.main}>Freelancer</Typography>
+                       <Typography variant={'body1'} color={theme.palette.secondary.main}>kontakt@dev-olczak.pl</Typography>
                     </Grid>
                 </Grid>
             </Box>
