@@ -26,6 +26,12 @@ export const navigationItems = {
             text:'edukacja',
             icon: `fa-solid fa-user-graduate fa-2xl`,
         },
+        {
+            name: 'Kontakt',
+            to: 'mailto: kontakt@dev-olczak.pl',
+            text: 'kontakt',
+            icon: ``
+        }
     ],
     footer: [],
     adminMenu: [

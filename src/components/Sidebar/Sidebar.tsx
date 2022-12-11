@@ -14,10 +14,6 @@ export const Sidebar = () => {
                     <SocialMediaIcons />
                     <Divider />
                     <AboutMe />
-                    <Divider/>
-                    <Button variant="outlined">
-                    <a href = "mailto: kontakt@dev-olczak.pl">Wyślij e-mail</a>
-                    </Button>
                 </Stack>
         </div>
         )
