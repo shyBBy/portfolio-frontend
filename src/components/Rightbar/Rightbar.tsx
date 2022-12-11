@@ -31,6 +31,7 @@ export const Rightbar = () => {
                                     key={item.text}
                                     to={item.to}
                                     className={
+                                    // eslint-disable-next-line no-restricted-globals
                                     location.pathname.includes(item.to) ? "rightbar_active" : "rightbar_inactive"
                                     }>
                        <Box p={2} textAlign={'center'}>
