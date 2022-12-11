@@ -8,7 +8,7 @@ export const TechStack = () => {
 
     return(
         <>
-            <Box sx={{ flexGrow: 1, marginTop: {xs: '5px', sm: '6px'} }}>
+            <Box sx={{ flexGrow: 1, marginTop: {xs: '10px', sm: '10px'} }}>
                     <Grid container spacing={{ xs: 2, md: 2 }} columns={{ xs: 2, sm: 2, md: 12 }}>
                         <Grid item xs={2} sm={2} md={6}>
                             <Stack/>
