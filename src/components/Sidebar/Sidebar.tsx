@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, Container, Divider, Stack} from '@mui/material'
+import {Box, Container, Divider, Stack}, Button from '@mui/material'
 import { AboutMe } from './AboutMe/AboutMe'
 import {SocialMediaIcons } from './SocialMediaIcons/SocialMediaIcons'
 import { Avatar } from './Avatar/Avatar'
