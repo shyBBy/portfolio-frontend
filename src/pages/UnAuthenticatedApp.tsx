@@ -22,7 +22,6 @@ export const UnAuthenticatedApp = () => {
                     <Route path="/home" element={<HomePage />} />
                     <Route path="/portfolio" element={<PortfolioPage />} />
                     <Route path="/education" element={<EducationPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
                     <Route path="/about-me" element={<AboutMePage />} />
                     <Route path="/login" element={<LoginPage />} />
                     <Route

@@ -26,12 +26,6 @@ export const navigationItems = {
             text:'edukacja',
             icon: `fa-solid fa-user-graduate fa-2xl`,
         },
-        {
-            name: 'Kontakt',
-            to: '/contact',
-            text:'kontakt',
-            icon: `fa-solid fa-message fa-2xl`,
-        },
     ],
     footer: [],
     adminMenu: [
