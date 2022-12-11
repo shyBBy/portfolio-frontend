@@ -22,6 +22,8 @@ import {navigationItems} from "../../config/navigation";
 export const Rightbar = () => {
 
     const theme = useTheme();
+    const location = useLocation()
+    const navigation = useNavigate()
 
     return (
                     <Stack spacing={2} p={3} sx={{paddingTop: '35vh'}}>
@@ -31,7 +33,6 @@ export const Rightbar = () => {
                                     key={item.text}
                                     to={item.to}
                                     className={
-                                    // eslint-disable-next-line no-restricted-globals
                                     location.pathname.includes(item.to) ? "rightbar_active" : "rightbar_inactive"
                                     }>
                        <Box p={2} textAlign={'center'}>
