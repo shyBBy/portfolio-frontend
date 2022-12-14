@@ -9,19 +9,18 @@ import './styles.css'
 export const Feed = () => {
 
     return (
-        <> 
-          <Box sx={{ flexGrow: 1 }}>
-                          <Stack spacing={2}>
-                              <Box className='bgimage' sx={{width: '100vw', height: '50vh'}}>
-                                  <Box className='mask' sx={{width: '100vw', height: '53vh'}}>
-                                      <Hero/>
-                                  </Box>
-                              </Box>
-                              <Box>
-                                  <MainContent/>
-                              </Box>
-                          </Stack>
-                      </Box>
+        <>
+            <Box className='bgimage' sx={{width: {xs: '99.6vw',lg: '81.3vw'}, height: '50vh', position: 'relative',
+                left: {xs:'-2.6%' ,sm:'-9vw', md: '-19vw' ,xl: '1.1%',lg: '-13.3%'},
+                top: {sm: '6.7vh'}
+            }}>
+                <Box className='mask' sx={{width: {lg: '81.3vw'}, height: '50vh', position: 'relative'}}>
+                    <Hero/>
+                </Box>
+            </Box>
+            <Box>
+                <MainContent/>
+            </Box>
         </>
     )
 }

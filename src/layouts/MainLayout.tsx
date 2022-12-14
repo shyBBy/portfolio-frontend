@@ -18,7 +18,7 @@ export const MainLayout: FC<Props> = ({ children }) => (
                 <Grid item xs={2} sm={2} md={2} lg={2} xl={1}>
                     <SidebarWrapper/>
                 </Grid>
-                <Grid item xs={4} sm={8} md={9} lg={9} xl={20}>
+                <Grid item xs={4} sm={8} md={9} lg={9} xl={24}>
                     <main>{children}</main>
                 </Grid>
                 <Grid item xs={2} sm={2} md={2} lg={2} xl={1}>

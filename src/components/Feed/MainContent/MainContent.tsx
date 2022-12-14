@@ -8,10 +8,9 @@ export const MainContent = () => {
 
     return(
         <>
-                <Box sx={{ flexGrow: 1 }}>
-                    <TechStack/>
-                   
-                </Box>
+            <Box sx={{ flexGrow: 1 }}>
+                <TechStack/>
+            </Box>
         </>
     )
 }

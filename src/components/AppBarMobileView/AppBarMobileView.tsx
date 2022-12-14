@@ -19,9 +19,9 @@ export const AppBarMobileView = () => {
             <AppBar
                 position="fixed"
                 sx={{
-                    width: { md: `calc(100% - ${drawerSideBarWidth}px)` },
+                    width: { md: `100%` },
                     ml: { md: `${drawerSideBarWidth}px`  },
-                    display: { sm: 'none', md: 'none' ,lg: 'none', xl:'none'},
+                    display: { lg: 'none', xl:'none'},
                 }}
             >
                 <Toolbar>
@@ -32,7 +32,7 @@ export const AppBarMobileView = () => {
                                 aria-label="open drawer"
                                 edge="start"
                                 onClick={handleDrawerToggleSideBar}
-                                sx={{ mr: 2, display: { md: 'none' } }}
+                                sx={{ mr: 2 }}
                             >
                                 <FormatListBulletedIcon /> 
                             </IconButton>
@@ -43,7 +43,7 @@ export const AppBarMobileView = () => {
                                 aria-label="open drawer"
                                 edge="start"
                                 onClick={handleDrawerToggleRightBar}
-                                sx={{ mr: 2, display: { md: 'none' } }}
+                                sx={{ mr: 2 }}
                             >
                                 <MenuIcon />
                             </IconButton>
