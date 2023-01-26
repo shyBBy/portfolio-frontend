@@ -10,9 +10,9 @@ export const HomePage = () => {
 
     return (
         <>
-            <Container fixed>
+            {/*<Container fixed>*/}
                 <Feed/>
-            </Container>
+            {/*</Container>*/}
         </>
     )
 };
