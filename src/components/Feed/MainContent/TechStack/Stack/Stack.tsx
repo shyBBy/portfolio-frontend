@@ -107,6 +107,12 @@ const itemData = [
         description: 'System zarządzania bazami danych oparty na języku SQL',
     },
     {
+        languageName: 'TypeORM',
+        img: `https://seeklogo.com/images/T/typeorm-logo-F243B34DEE-seeklogo.com.png`,
+        type: 'narzędzie do baz danych',
+        description: 'Umożliwia ono łatwe i szybkie mapowanie obiektów aplikacji na tabele w bazie danych',
+    },
+    {
         languageName: 'html',
         img: `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg`,
         type: 'język znaczników',
@@ -118,4 +124,17 @@ const itemData = [
         type: 'biblioteka css',
         description: 'Biblioteka komponentów interfejsu użytkownika.',
     },
+     {
+        languageName: 'Swagger',
+        img: `https://static-00.iconduck.com/assets.00/swagger-icon-512x512-halz44im.png`,
+        type: 'narzedzie',
+        description: 'Narzędzie do tworzenia i dokumentowania interfejsów API.',
+    },
+    {
+        languageName: 'Trello',
+        img: `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg`,
+        type: 'narzedzie',
+        description: 'Zarządzania projektami, polegające na tworzeniu i przydzielaniu zadań na tablicach Kanban.',
+    },
 ]
+
