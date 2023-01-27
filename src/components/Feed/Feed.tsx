@@ -17,9 +17,6 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import bgCastle from '../../assets/img/castle_front.png'
-import bgVeritas from '../../assets/img/castle_behind.png'
-
 
 
 export const Feed = () => {
@@ -51,18 +48,12 @@ export const Feed = () => {
                         Pracuję z różnymi technologiami i jestem zawsze gotów wypróbować nowe narzędzia, aby poprawić jakość moich projektów. Jestem zdeterminowany, aby rozpocząć pracę w tym zawodzie - stać się prawdziwym developerem dlatego też zawsze szukam nowych wyzwań, które pozwolą mi rozwijać się jako programista.
                     </Typography>
                 </Grid>
-                <Grid item xs={12} sm={6} md={6} lg={3} style={{ textAlign: 'center' }}>
-                    <Typography variant={'h5'} color="text.secondary">Projekt, nad którym aktualnie pracuje.</Typography>
-                </Grid>
-                <Grid item xs={12} sm={6} md={6} lg={3} style={{ textAlign: 'center' }}>
-                    <Typography variant={'h5'} color="text.secondary">Ostatni ukończony projekt.</Typography>
-                </Grid>
 
                 <Grid item xs={12} sm={6} md={6} lg={3}>
                     <Card >
                         <CardMedia
                             sx={{ height: 140, backgroundColor: '#520404' }}
-                            image={bgCastle}
+                            
                             title="green iguana"
                         />
                         <CardContent>
@@ -79,6 +70,8 @@ export const Feed = () => {
                         </CardActions>
                     </Card>
                 </Grid>
+                
+                
                 <Grid item xs={12} sm={6} md={6} lg={3}>
                     <Card >
                         <CardMedia
@@ -88,11 +81,11 @@ export const Feed = () => {
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="div" color="text.secondary">
-                                Lizard
+                                FleetPRO
                             </Typography>
                             <Typography variant="body2">
-                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                species, ranging across all continents except Antarctica
+                                Aplikacja do zarządzania flotą pojazdów to narzędzie, które pozwala na łatwe i skuteczne zarządzanie zasobami transportowymi w firmie. Dostęp do aplikacji jest możliwy tylko po poprawnym zalogowaniu, a dostępne role to administrator i użytkownik z uwzględnieniem nazwy stanowiska w firmie.  
+
                             </Typography>
                         </CardContent>
                         <CardActions>

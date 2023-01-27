@@ -136,5 +136,6 @@ const itemData = [
         type: 'narzedzie',
         description: 'Zarządzania projektami, polegające na tworzeniu i przydzielaniu zadań na tablicach Kanban.',
     },
+    
 ]
 
