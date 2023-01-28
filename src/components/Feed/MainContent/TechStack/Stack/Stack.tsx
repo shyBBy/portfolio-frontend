@@ -29,13 +29,13 @@ export const Stack = () => {
         <>
             {itemData.map((item) => (
                 <Grid item xs={12} sm={6} md={3} lg={3}>
-                    <Card sx={{ display: 'flex' }}>
+                    <Card sx={{ display: 'flex', minHeight: 200 }}>
                         <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                             <CardContent sx={{ flex: '1 0 auto' }}>
-                                <Typography component="div" variant="h5">
+                                <Typography component="div" variant="h5" color="text.secondary">
                                     {item.languageName}
                                 </Typography>
-                                <Typography variant="subtitle1" color="text.secondary" component="div">
+                                <Typography variant="subtitle1" color="#9e9e9e" component="div">
                                     {item.type}
                                 </Typography>
                             </CardContent>
@@ -45,9 +45,9 @@ export const Stack = () => {
                         </Box>
                         <CardMedia
                             component="img"
-                            sx={{ width: 120 }}
+                            sx={{ width: 140 }}
                             image={item.img}
-                            alt="Live from space album cover"
+                            alt="tech logo"
                         />
                     </Card>
                 </Grid>

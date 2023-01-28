@@ -5,7 +5,8 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
-
+import veritasCastle from '../../../../assets/img/castle_front.png'
+import fleetPro from '../../../../assets/img/fleetPro.png'
 
 export const WhatIActuallyDoSection = ()=> {
     const theme = useTheme();
@@ -26,8 +27,8 @@ export const WhatIActuallyDoSection = ()=> {
                 <Card >
                     <CardMedia
                         sx={{ height: 140, backgroundColor: '#520404' }}
-
-                        title="green iguana"
+                        image={veritasCastle}
+                        title="Webapp veritas-rp"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div" color="text.secondary">
@@ -38,8 +39,8 @@ export const WhatIActuallyDoSection = ()=> {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button size="small">Share</Button>
-                        <Button size="small">Learn More</Button>
+                        <Button size="small">Repozytorium</Button>
+                        <Button size="small">Live DEMO</Button>
                     </CardActions>
                 </Card>
             </Grid>
@@ -49,8 +50,8 @@ export const WhatIActuallyDoSection = ()=> {
                 <Card >
                     <CardMedia
                         sx={{ height: 140 }}
-                        image="/static/images/cards/contemplative-reptile.jpg"
-                        title="green iguana"
+                        image={fleetPro}
+                        title="FleetPRO"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div" color="text.secondary">
@@ -62,8 +63,8 @@ export const WhatIActuallyDoSection = ()=> {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button size="small">Share</Button>
-                        <Button size="small">Learn More</Button>
+                        <Button size="small">Repozytorium</Button>
+                        <Button size="small">Live Demo</Button>
                     </CardActions>
                 </Card>
             </Grid>
