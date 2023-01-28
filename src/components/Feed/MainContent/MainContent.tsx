@@ -2,7 +2,7 @@ import React from "react";
 import {Box, Divider, Grid, Paper, Typography} from "@mui/material";
 import {Boxes} from "./Boxes/Boxes";
 import {TechStack} from "./TechStack/TechStack";
-import { LatestAndWIPProjectSection } from "./LatestAndWIPProjectSection/LatestAndWIPProjectSection";
+import { WhatIActuallyDoSection } from "./WhatIActuallyDo/WhatIActuallyDoSection";
 
 export const MainContent = () => {
 
