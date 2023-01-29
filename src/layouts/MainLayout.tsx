@@ -31,7 +31,7 @@ export const MainLayout: FC<Props> = ({ children }) => (
                 <Grid item xs={2} sm={2} md={2} lg={2} xl={1}>
                     <SidebarWrapper/>
                 </Grid>
-                <Grid container spacing={3}>
+                <Grid container spacing={3} sx={{marginLeft: {xs: '-10%'}}}>
                     {children}
                 </Grid>
                 <Grid item xs={2} sm={2} md={2} lg={2} xl={1}>
