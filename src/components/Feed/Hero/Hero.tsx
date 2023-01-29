@@ -12,7 +12,7 @@ export const Hero = () => {
         <>
             <Grid item xs={12} sm={6} md={6} lg={3} >
                 <Typography variant={'h1'}>Cześć, jestem Dawid!</Typography>
-                <Typography variant={'body1'}>Uczący się Full-Stack Developer, jeśli chcesz dowiedzieć się czegoś więcej o mojej historii w programowaniu oraz życiu nie związanym z branża to kliknij w poniższy przycisk lub skorzystaj z bocznego menu :)</Typography>
+                <Typography variant={'body1'}>Uczący się Full-Stack Developer, jeśli chcesz dowiedzieć się czegoś więcej o mojej historii w programowaniu oraz życiu niezwiązanym z branża to kliknij w poniższy przycisk lub skorzystaj z bocznego menu :)</Typography>
                 <Link to={'/portfolio'} style={{textDecoration: 'none'}}><Button variant="outlined">Więcej o mnie...</Button></Link>
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={3} sx={{display: {xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
