@@ -12,9 +12,7 @@ export const HomePage = () => {
     return (
       
       <MainLayout>
-        <>
           <Feed/>
-        </>
       </MainLayout>
     )
 };

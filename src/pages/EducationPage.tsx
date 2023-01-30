@@ -6,7 +6,9 @@ import {Hero} from "../components/Education/Hero/Hero";
 export const EducationPage = () => {
     return(
         <>
-            <Container maxWidth="lg">
+            <Container maxWidth="lg" sx={{
+                marginTop: {xs: '13%'}
+            }}>
                 <Education/>
             </Container>
         </>

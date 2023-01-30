@@ -23,7 +23,7 @@ export const MainLayout: FC<Props> = ({ children }) => (
                 //         : theme.palette.grey[900],
                 flexGrow: 1,
                 height: '100vh',
-                overflow: 'auto',
+                overflow: 'hidden',
             }}
         >
             <Container maxWidth="xl" sx={{mt: 4, mb: 4,}}>
@@ -31,7 +31,9 @@ export const MainLayout: FC<Props> = ({ children }) => (
                 <Grid item xs={2} sm={2} md={2} lg={2} xl={1}>
                     <SidebarWrapper/>
                 </Grid>
-                <Grid container spacing={3} sx={{marginLeft: {xs: '-14%'}}}>
+                <Grid container spacing={3} sx={{
+                    marginLeft: {xs: '-13%', lg: '-1%'},
+                }}>
                     {children}
                 </Grid>
                 <Grid item xs={2} sm={2} md={2} lg={2} xl={1}>
