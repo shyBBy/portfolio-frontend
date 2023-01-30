@@ -23,7 +23,7 @@ export const MainLayout: FC<Props> = ({ children }) => (
                 //         : theme.palette.grey[900],
                 flexGrow: 1,
                 height: '100vh',
-                overflow: 'hidden',
+
             }}
         >
             <Container maxWidth="xl" sx={{mt: 4, mb: 4,}}>
