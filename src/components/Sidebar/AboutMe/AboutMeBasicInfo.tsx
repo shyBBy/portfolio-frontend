@@ -1,33 +1,16 @@
-import {
-    Box,
-    Container, Divider,
-    Grid, List, ListItem,
-    Stack,
-    Table,
-    TableBody,
-    TableCell,
-    TableContainer,
-    TableHead,
-    TableRow,
-    Typography,
-    useTheme
-} from '@mui/material'
+import {Box, Divider, Grid, Typography, useTheme} from '@mui/material'
 import React from 'react'
-import DoneIcon from '@mui/icons-material/Done';
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
 import {SingleListItem} from "./SingleListItem";
-
 
 
 export const AboutMeBasicInfo = () => {
 
     const theme = useTheme();
 
-    return(
+    return (
         <>
             <Box p='10px'>
-                <Grid container >
+                <Grid container>
                     <Grid xs={4}>
                         <Typography variant={'body1'}>Lokalizacja:</Typography>
                         <Typography variant={'body1'}>Wiek:</Typography>
@@ -37,12 +20,13 @@ export const AboutMeBasicInfo = () => {
                     <Grid xs={8} textAlign='right'>
                         <Typography variant={'body1'} color={theme.palette.secondary.main}>Polska, Łódź</Typography>
                         <Typography variant={'body1'} color={theme.palette.secondary.main}>26</Typography>
-                        <Typography variant={'body1'} color={theme.palette.secondary.main}>Freelancer</Typography>
-                       <Typography variant={'body1'} color={theme.palette.secondary.main}>kontakt@dev-olczak.pl</Typography>
+                        <Typography variant={'body1'} color={theme.palette.secondary.main}>Szukam pracy</Typography>
+                        <Typography variant={'body1'}
+                                    color={theme.palette.secondary.main}>kontakt@dev-olczak.pl</Typography>
                     </Grid>
                 </Grid>
             </Box>
-            <Divider />
+            <Divider/>
             <Box p={'10px'}>
                 <Typography variant={'h6'}>Czym się zajmuję</Typography>
             </Box>
@@ -51,6 +35,7 @@ export const AboutMeBasicInfo = () => {
                 <SingleListItem text={'Projektowanie stron graficznych'}/>
                 <SingleListItem text={'Projekty graficzne 2D'}/>
                 <SingleListItem text={'Loga, banery, ulotki'}/>
+                <SingleListItem text={'Tworzeniem sklepu internetowego'}/>
             </Box>
             <Box p={'10px'}>
                 <Typography variant={'h6'}>Dodatkowe umiejętności</Typography>
@@ -60,6 +45,7 @@ export const AboutMeBasicInfo = () => {
                 <SingleListItem text={'Hosting www, domeny, vps'}/>
                 <SingleListItem text={'Konfiguracja serwera www (apache)'}/>
                 <SingleListItem text={'Domeny internetowe'}/>
+                <SingleListItem text={'WooCommerce'}/>
             </Box>
         </>
     )

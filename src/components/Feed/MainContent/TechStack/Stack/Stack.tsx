@@ -83,6 +83,12 @@ const itemData = [
         description: 'Umożliwia tworzenie aplikacji opartych na architekturze opartej na kontrolerach i modułach.',
     },
     {
+        languageName: 'react-native',
+        img: `https://www.pngkit.com/png/detail/373-3738691_react-native-svg-transformer-allows-you-import-svg.png`,
+        type: 'framework',
+        description: 'wydajny i popularny framework do tworzenia mobilnych aplikacji na platformy iOS i Android.',
+    },
+    {
         languageName: 'express',
         img: `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg`,
         type: 'framework',

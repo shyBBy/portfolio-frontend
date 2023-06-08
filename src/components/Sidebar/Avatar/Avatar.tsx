@@ -1,8 +1,7 @@
 import React from 'react'
 import './Avatar.css'
-import me3 from '../../../assets/img/me3.png'
 import me5 from '../../../assets/img/me5.png'
-import {Box, Container } from '@mui/material'
+import {Box} from '@mui/material'
 
 export const Avatar = () => {
 
@@ -11,8 +10,8 @@ export const Avatar = () => {
     return (
         <>
             <Box className="avatar" p={1}>
-                <img src={me5} />
+                <img src={me5}/>
             </Box>
         </>
-        )
+    )
 }

@@ -15,7 +15,7 @@ export const AboutMe = () => {
                     Dawid Olczak
                 </Typography>
                 <Typography variant="caption" component="p" style={{ textAlign: 'center', color: '#9e9e9e' }}>
-                    Full-Stack developer
+                    #szukampracyjakodeveloper
                 </Typography>
             </Box>
             <Divider />

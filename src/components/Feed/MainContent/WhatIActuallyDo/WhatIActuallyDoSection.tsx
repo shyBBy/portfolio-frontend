@@ -1,70 +1,78 @@
 import React from "react";
-import {Box, Grid, Typography, useTheme, Stack, List, ListItem, Divider, Container, Button} from "@mui/material";
-import CssBaseline from '@mui/material/CssBaseline';
+import {Button, Grid, Typography, useTheme} from "@mui/material";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
-import veritasCastle from '../../../../assets/img/castle_front.png'
-import fleetPro from '../../../../assets/img/fleetPro.png'
+import reactNative from '../../../../assets/img/reactNative.png'
+import woocommerce from '../../../../assets/img/woocoomerce.png'
 
-export const WhatIActuallyDoSection = ()=> {
+export const WhatIActuallyDoSection = () => {
     const theme = useTheme();
-    return(
+    return (
         <>
-            <Grid item xs={12} sm={6} md={12} lg={3} style={{ textAlign: 'center' }}>
+            <Grid item xs={12} sm={6} md={12} lg={3} style={{textAlign: 'center'}}>
                 <Typography variant={'h1'} color="text.secondary">Co aktualnie robię?</Typography>
             </Grid>
-            <Grid item xs={12} sm={6} md={12} lg={3} style={{ textAlign: 'center' }}>
+            <Grid item xs={12} sm={6} md={12} lg={3} style={{textAlign: 'center'}}>
                 <Typography variant={'body1'}>
-                    Jestem ambitnym i zmotywowanym programistą, stale rozwijającym swoje umiejętności poprzez tworzenie projektów, oglądanie filmów instruktażowych i ciągłe uczenie się. Jestem skupiony na osiągnięciu celów i dostarczaniu jak najlepszych rozwiązań dla moich klientów.
+                    Jestem ambitnym i zmotywowanym programistą, stale rozwijającym swoje umiejętności poprzez tworzenie
+                    projektów, oglądanie filmów instruktażowych i ciągłe uczenie się. Jestem skupiony na osiągnięciu
+                    celów i dostarczaniu jak najlepszych rozwiązań dla moich klientów.
 
-                    Pracuję z różnymi technologiami i jestem zawsze gotów wypróbować nowe narzędzia, aby poprawić jakość moich projektów. Jestem zdeterminowany, aby rozpocząć pracę w tym zawodzie - stać się prawdziwym developerem dlatego też zawsze szukam nowych wyzwań, które pozwolą mi rozwijać się jako programista.
+                    Pracuję z różnymi technologiami i jestem zawsze gotów wypróbować nowe narzędzia, aby poprawić jakość
+                    moich projektów. Jestem zdeterminowany, aby rozpocząć pracę w tym zawodzie - stać się prawdziwym
+                    developerem dlatego też zawsze szukam nowych wyzwań, które pozwolą mi rozwijać się jako programista.
                 </Typography>
             </Grid>
 
             <Grid item xs={12} sm={6} md={6} lg={3}>
-                <Card >
+                <Card>
                     <CardMedia
-                        sx={{ height: 140, backgroundColor: '#520404' }}
-                        image={veritasCastle}
-                        title="Webapp veritas-rp"
+                        sx={{height: 140, backgroundColor: '#520404'}}
+                        image={reactNative}
+                        title="React-Native"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div" color="text.secondary">
-                            Veritas
+                            React Native
                         </Typography>
                         <Typography variant="body2">
-                            Projekt dotyczy serwera RolePlay na platformie GothicRP. Projekt składa się z wielu aspektów i ma, że tak powiem w sobie developerów od różnych zadań. Skrypt gry, modele 2D oraz 3D, grafika itp. Posiada członków ekipy takich jak GameMaster, Supporter czy Moderator Forum. Wraz z zespołem zajmujemy się webdeveloperka i naszym zadaniem jest stworzenie panelu gracza (swego rodzaju dashboard admina), w którym gracz będzie mógł stworzyć postać w grze, zarządzać nią, swoim ekwipunkiem, grupami postaci oraz wszystkim
+                            Aktualnie oddaję się zgłębianiu tajników programowania w React Native - frameworku, który umożliwia tworzenie aplikacji mobilnych. Z ogromną pasją i zaangażowaniem uczę się korzystać z tego narzędzia, wykorzystując przy tym platformę Expo, która usprawnia proces tworzenia, testowania i wdrażania aplikacji.
+
+                            Chociaż jestem na początkowym etapie tej podróży, to nieustannie rozwijam swoje umiejętności, tworząc aplikacje do zarządzania zamówieniami. Moje projekty wykorzystują kilka niezależnych modułów zewnętrznych, które integrują się za pomocą REST API. Dążę do tworzenia aplikacji, które nie tylko są estetyczne i intuicyjne dla użytkowników, ale także zapewniają optymalne zarządzanie zamówieniami.
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button size="small">Repozytorium</Button>
-                        <Button size="small">Live DEMO</Button>
+                        <Button href='https://github.com/shyBBy/fe_shop_manager' size="small">Repozytorium frontend</Button>
+                        <Button href='https://github.com/shyBBy/be_shop_manager' size="small">Repozytorium backend</Button>
                     </CardActions>
                 </Card>
             </Grid>
 
 
             <Grid item xs={12} sm={6} md={6} lg={3}>
-                <Card >
+                <Card>
                     <CardMedia
-                        sx={{ height: 140 }}
-                        image={fleetPro}
-                        title="FleetPRO"
+                        sx={{height: 140}}
+                        image={woocommerce}
+                        title="WooCommerce"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div" color="text.secondary">
-                            FleetPRO
+                            WooCommerce
                         </Typography>
                         <Typography variant="body2">
-                            Aplikacja do zarządzania flotą pojazdów to narzędzie, które pozwala na łatwe i skuteczne zarządzanie zasobami transportowymi w firmie. Dostęp do aplikacji jest możliwy tylko po poprawnym zalogowaniu, a dostępne role to administrator i użytkownik z uwzględnieniem nazwy stanowiska w firmie.
+                            W ostatnim czasie poświęciłem czas na zgłębianie wiedzy z zakresu WordPressa oraz jednego z najpopularniejszych modułów sklepowych - WooCommerce. W ramach tego procesu, skonfigurowałem cały serwer VPS, zajmując się domeną, hostingiem, certyfikatem SSL oraz konfiguracją całego sklepu.
+
+                            Moje doświadczenie obejmuje także integrację różnych systemów płatności i zewnętrznych aplikacji, tworząc kompleksowe rozwiązania dla klientów. Dzięki temu, jestem w stanie stworzyć zoptymalizowany interfejs oraz zapewnić płynne zarządzanie zamówieniami.
+
+                            Nieustannie poszerzam swoje umiejętności, a obecnie również zgłębiam możliwości tworzenia aplikacji mobilnych przy użyciu frameworka React Native. To połączenie wiedzy z zakresu WooCommerce i umiejętności tworzenia aplikacji mobilnych pozwala mi na tworzenie rozbudowanych rozwiązań do zarządzania zamówieniami.
 
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Button size="small">Repozytorium</Button>
-                        <Button size="small">Live Demo</Button>
+                        <Button href='https://bigsewciu.shop' size="small">Live Demo</Button>
                     </CardActions>
                 </Card>
             </Grid>
