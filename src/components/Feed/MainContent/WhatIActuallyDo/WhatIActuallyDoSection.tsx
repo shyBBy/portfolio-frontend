@@ -4,7 +4,7 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
-import reactNative from '../../../../assets/img/reactNative.png'
+import wooManager from '../../../../assets/img/wooManager.png'
 import woocommerce from '../../../../assets/img/woocoomerce.png'
 
 export const WhatIActuallyDoSection = () => {
@@ -30,17 +30,15 @@ export const WhatIActuallyDoSection = () => {
                 <Card>
                     <CardMedia
                         sx={{height: 140, backgroundColor: '#520404'}}
-                        image={reactNative}
+                        image={wooManager}
                         title="React-Native"
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div" color="text.secondary">
-                            React Native
+                            WooManager
                         </Typography>
                         <Typography variant="body2">
-                            Aktualnie oddaję się zgłębianiu tajników programowania w React Native - frameworku, który umożliwia tworzenie aplikacji mobilnych. Z ogromną pasją i zaangażowaniem uczę się korzystać z tego narzędzia, wykorzystując przy tym platformę Expo, która usprawnia proces tworzenia, testowania i wdrażania aplikacji.
-
-                            Chociaż jestem na początkowym etapie tej podróży, to nieustannie rozwijam swoje umiejętności, tworząc aplikacje do zarządzania zamówieniami. Moje projekty wykorzystują kilka niezależnych modułów zewnętrznych, które integrują się za pomocą REST API. Dążę do tworzenia aplikacji, które nie tylko są estetyczne i intuicyjne dla użytkowników, ale także zapewniają optymalne zarządzanie zamówieniami.
+                            Aktualnie pracuję nad aplikacją mobilną, którą tworzę w Expo React Native w oparciu o TypeScript. Jest to aplikacja o nazwie "WooManager", która ma na celu integrację sklepu WooCommerce z różnymi systemami, takimi jak PayU i Furgonetka.pl. Moją motywacją jest stworzenie rozwiązania, które umożliwi wygodne zarządzanie zamówieniami oraz usprawni procesy płatności i wysyłki dla właścicieli sklepów internetowych. Aplikacja znajduje praktyczne zastosowanie w e-commerce, umożliwiając skuteczne łączenie różnych usług związanych z obsługą sklepu. Cały czas pracuję nad jej doskonaleniem, aby dostarczyć funkcje odpowiadające na realne potrzeby użytkowników.
                         </Typography>
                     </CardContent>
                     <CardActions>
